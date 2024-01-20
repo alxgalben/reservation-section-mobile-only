@@ -32,12 +32,33 @@
     <div class="card mb-3" style="position: relative; overflow: hidden;">
       <div class="card-header" style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
         <strong style="color: white;">Travis Go</strong>
-        <strong style="color: white; font-size: 25px; margin-left: auto;">32€ / zi</strong>
+        <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
     </div>
     
       <div class="card-body">
-        <h5 class="card-title" style="text-transform: uppercase; text-align: center;"><span class="badge text-bg-warning" style="padding: 12px;"><p class="lead">Cel mai cautat</p></span></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span class="badge text-bg-warning" style="padding: 6px 12px;"><p class="lead">Cel mai cautat</p></span></h5>
+        <ul class="list-group" style="height: 100%; text-align: center;">
+          <hr/>
+          <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de inchiriere</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">TVA 19%</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">taxa spalare auto</h6>
+        </ul>
       </div>
     </div>
     
@@ -47,11 +68,31 @@
     <div class="card mb-3">
       <div class="card-header" style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
         <strong style="color: white;">Travis Plus</strong>
-        <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
+        <strong style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
     </div>
       <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <ul class="list-group" style="height: 100%; text-align: center;">
+          <hr/>
+          <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de inchiriere</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">TVA 19%</h6>
+          <hr/>
+          <h6 style="font-weight: 100;">taxa spalare auto</h6>
+        </ul>
       </div>
     </div>
   </div>
@@ -97,5 +138,10 @@ ion-icon {
 }
 
 </style>
+
+<script>
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
 
 </html>
