@@ -10,52 +10,63 @@
 
 </head>
 <div class="all" style="height: 100vh;">
-<div class="car-preview-card card" style="width: 22.2rem; height: 37.2rem;">
-  <div class="card-body">
-    <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative;">
-      <ul style="list-style: none; padding: 16px; display: flex; justify-content: space-between; z-index: 1000;">
-        <li>
-          <img src="coming_soon.jpeg" alt="Coming Soon" class="eticheta">
-        </li>
-        <li>
-          <img src="eco_car.jpeg" alt="Eco Car" class="eticheta">
-        </li>
-        <li>
-          <img src="new_model.jpeg" alt="New Model" class="eticheta">
-        </li>
-        <li>
-          <img src="premium_car.jpeg" alt="Premium Car" class="eticheta">
-        </li>
-        <li>
-          <img src="promo_car.jpeg" alt="Promo Car" class="eticheta">
-        </li>
-      </ul>
+  <div class="car-preview-card card" style="width: 22.2rem; height: 37.2rem;">
+    <div class="card-body">
+      <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative;">
+        <ul style="list-style: none; padding: 16px; display: flex; justify-content: space-between; z-index: 1000;">
+          <li>
+            <img src="coming_soon.jpeg" alt="Coming Soon" class="eticheta">
+          </li>
+          <li>
+            <img src="eco_car.jpeg" alt="Eco Car" class="eticheta">
+          </li>
+          <li>
+            <img src="new_model.jpeg" alt="New Model" class="eticheta">
+          </li>
+          <li>
+            <img src="premium_car.jpeg" alt="Premium Car" class="eticheta">
+          </li>
+          <li>
+            <img src="promo_car.jpeg" alt="Promo Car" class="eticheta">
+          </li>
+        </ul>
 
 
-    <div class="slider" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: fit-content;">
-        <img src="https://rentacar.travis.ro/media/volkswagen_passat_2019_1jpg.jpg" alt="Random Car Image" style="width: 100%; height: 100%; object-fit: cover;">
-        <img src="https://rentacar.travis.ro/media/toyota_rav4_2022_1jpg.jpg" alt="Random Car Image 2" style="width: 100%; height: 100%; object-fit: cover;">
-        <!-- Add more images as needed -->
-    </div>
-    <div class="indicators">
-        <div class="indicator active" onclick="document.querySelector('.slider').style.transform = 'translateX(0%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 0); })"></div>
-        <div class="indicator" onclick="document.querySelector('.slider').style.transform = 'translateX(-100%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 1); })"></div>
-        <!-- Add more indicators as needed based on the number of images -->
-    </div>
-</div>
+        <div class="slider"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: fit-content;">
+          <img src="https://rentacar.travis.ro/media/volkswagen_passat_2019_1jpg.jpg" alt="Random Car Image"
+            style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://rentacar.travis.ro/media/toyota_rav4_2022_1jpg.jpg" alt="Random Car Image 2"
+            style="width: 100%; height: 100%; object-fit: cover;">
+          <!-- Add more images as needed -->
+        </div>
+        <div class="indicators">
+          <div class="indicator active"
+            onclick="document.querySelector('.slider').style.transform = 'translateX(0%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 0); })">
+          </div>
+          <div class="indicator"
+            onclick="document.querySelector('.slider').style.transform = 'translateX(-100%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 1); })">
+          </div>
+          <!-- Add more indicators as needed based on the number of images -->
+        </div>
+      </div>
 
 
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-    <div>
-        <h5 class="card-title" style="margin-bottom: 0 !important;">Volkswagen Touareg</h5>  
-        <h5 class="card-title">(4x4 Automat) Diesel</h5>
-    </div>
-    <div style="text-align: right;">
-        <h6 class="card-title" style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">from</h6> 
-        <h5 class="card-subtitle" style="font-size: 18px !important; margin-bottom: 0;"><span style="font-weight: bold; font-size: 1.5rem;">5230 € </span></h5>
-        <h6 class="card-title" style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">for 365 days</h6> 
-    </div>
-</div>
+      <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+        <div>
+          <h5 class="card-title" style="margin-bottom: 0 !important;">Volkswagen Touareg</h5>
+          <h5 class="card-title">(4x4 Automat) Diesel</h5>
+        </div>
+        <div style="text-align: right;">
+          <h6 class="card-title"
+            style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">from</h6>
+          <h5 class="card-subtitle" style="font-size: 18px !important; margin-bottom: 0;"><span
+              style="font-weight: bold; font-size: 1.5rem;">5230 € </span></h5>
+          <h6 class="card-title"
+            style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">for 365 days
+          </h6>
+        </div>
+      </div>
 
 
 
@@ -63,202 +74,201 @@
       <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
 
 
-    <div class="tags">
-      <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="calendar" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">2024</span>
-      </span>
+      <div class="tags">
+        <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="calendar" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">2024</span>
+        </span>
 
-      <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="person" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">5</span>
-      </span>
+        <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="person" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">5</span>
+        </span>
 
-      <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="analytics" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">Automatic</span>
-      </span>
+        <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="analytics" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">Automatic</span>
+        </span>
 
-      <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="log-out" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">4</span>
-      </span>
+        <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="log-out" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">4</span>
+        </span>
 
-      <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="construct" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">Diesel</span>
-      </span>
+        <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="construct" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">Diesel</span>
+        </span>
 
-      <span class="tag location" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-        <ion-icon name="location" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-        <span style="font-size: 14px;">Timisoara</span>
-      </span>
-    </div>
-    <div style="text-align: center; margin-top: 15px;">
-      <button type="button" id="accordionButton" class="btn btn-dark" style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold;">SEE DETAILS</button>
-    </div>
-  </div>
-
-  </div>
-
-<div class="accordion fixed-bottom" id="accordionExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" style="display: none;">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <strong style="font-size: 25px; margin-right: 35px;">45€</strong>
-        <span class="btn btn-warning next"><strong>NEXT</strong></span>
-      </button>
-    </h2>
-  </div>
-</div>
-
-
-
-<div class="offcanvas offcanvas-bottom vh-100" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="overflow-y: auto;">
-  <div class="offcanvas-body small">
-    <div style="width: 100%; margin: auto; display: flex; align-items: center; justify-content: center; margin-top: 50px; margin-bottom: 50px;">
-      <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;"><ion-icon name="arrow-back-circle-outline" style="margin-right: 20px; font-size: 64px;"></ion-icon></a>
-      <ul class="list-unstyled" style="margin-bottom: 0px; list-style-type: none; padding: 0px; text-align: left; width: 100%;">
-        <li>
-          <p class="lead">
-            Preluare din <strong>Iasi</strong> pe <strong>20/01/2024</strong>
-          </p>
-        </li>
-        <li>
-          <p class="lead">
-            Predare in <strong>Timisoara</strong> pe <strong>23/01/2024</strong>
-          </p>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="row mx-auto" style="width: 85%; text-align: center; border-radius: 24px !important;">
-
-      <div class="card mb-3" style="width: 100%; border-radius: 24px !important;">
-        <div class="card-body">
-          <h5 class="card-title">Volkswagen Touareg (4x4 Automat) Diesel</h5>
-          <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
-          
-          <div class="row">
-            <div class="column">
-              <span class="icon">An: </span>
-              2022
-            </div>
-            <div class="column">
-              <span class="icon">Combustibil: </span>
-              Benzina
-            </div>
-          </div>
-        
-          <div class="row">
-            <div class="column">
-              <span class="icon">Motorizare: </span>
-              1998 cmc 122 CP
-            </div>
-            <div class="column">
-              <span class="icon">Transmisie: </span>
-              Automata
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column">
-              <span class="icon">Locuri: </span>
-              5
-            </div>
-            <div class="column">
-              <span class="icon">Usi: </span>
-              4
-            </div>
-          </div>
-
-          <div class="dotari">
-            <p class="h6">Scaune fata inclazite</p>
-            <p class="h6">Senzori parcare</p>
-            <p class="h6">Camera video marsarier</p>
-            <p class="h6">Pilot automat adaptiv</p>
-            <p class="h6">Climatizare automata</p>
-            <p class="h6">Geamuri electrice</p>
-            <p class="h6">Asistent unghi mort</p>
-            <p class="h6">Apple CarPlay / Anddoid Auto</p>
-          </div>
-
-          <p id="show-dotari" onclick="toggleDotari()">Vezi dotarile</p>
-        </div>
+        <span class="tag location" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+          <ion-icon name="location" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+          <span style="font-size: 14px;">Timisoara</span>
+        </span>
       </div>
-    
-      <div class="col-sm-6" style="padding: 0 !important;">
-        <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-          <div class="card-header" onclick="toggleFirstPlan()" style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
-            <strong style="color: white;">Travis Go</strong>
-            <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
-        </div>
-        
-          <div class="card-body first-plan" id="plan">
-            <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span class="badge text-bg-warning" style="padding: 6px 12px;"><p class="lead">Cel mai cautat</p></span></h5>
-            <ul class="list-group" style="height: 100%; text-align: center;">
-              <hr/>
-              <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de inchiriere</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">TVA 19%</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">taxa spalare auto</h6>
+      <div style="text-align: center; margin-top: 15px;">
+        <button type="button" id="accordionButton" class="btn btn-dark"
+          style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold;">SEE DETAILS</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="accordion fixed-bottom" id="accordionExample" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+    style="display: none;">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          <strong style="font-size: 25px; margin-right: 35px;">45€</strong>
+          <span class="btn btn-warning next"><strong>NEXT</strong></span>
+        </button>
+      </h2>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-bottom vh-100" tabindex="-1" id="offcanvasBottom"
+    aria-labelledby="offcanvasBottomLabel" style="overflow-y: auto;">
+    <div class="offcanvas-body small">
+
+      <div class="row mx-auto" style="width: 85%; text-align: center; border-radius: 24px !important;">
+
+        <div
+          style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
+          <div class="align-horizontal">
+            <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+              <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
+            </a>
+            <ul class="list-unstyled"
+              style="margin-bottom: 0px; list-style-type: none; padding: 0px; text-align: left; width: 100%;">
+              <li>
+                <p class="lead" style="font-size: 1rem;">
+                  Preluare din <strong>Iasi</strong> pe <strong>20/01/2024</strong> la <strong>14:30</strong>
+                </p>
+              </li>
+              <li>
+                <p class="lead" style="font-size: 1rem;">
+                  Predare in <strong>Timisoara</strong> pe <strong>23/01/2024</strong> la <strong>10:00</strong>
+                </p>
+              </li>
             </ul>
           </div>
         </div>
-        
-      </div>
-    
-      <div class="col-sm-6" style="padding: 0 !important;">
-        <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-          <div class="card-header" onclick="toggleSecondPlan()" style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
-            <strong style="color: white;">Travis Plus</strong>
-            <strong style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
-        </div>
-          <div class="card-body second-plan" id="plan">
-            <ul class="list-group" style="height: 100%; text-align: center;">
-              <hr/>
-              <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de inchiriere</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">TVA 19%</h6>
-              <hr/>
-              <h6 style="font-weight: 100;">taxa spalare auto</h6>
+
+        <div class="card mb-3" style="width: 100%; border-radius: 24px !important; text-align: left;">
+          <div class="card-body">
+            <h5 class="card-title">Volkswagen Touareg (4x4 Automat) Diesel</h5>
+            <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
+            <hr/>
+
+            <ul class="list-group" style="height: 100%; text-align: left;">
+              <h6 style="font-weight: 100;">An: 2022</h6>
+              <h6 style="font-weight: 100;">Combustibil: Benzina</h6>
+              <h6 style="font-weight: 100;">Motorizare: 1998 cmc 122 CP</h6>
+              <h6 style="font-weight: 100;">Transmisie: Automata</h6>
+              <h6 style="font-weight: 100;">Locuri :5</h6>
+              <h6 style="font-weight: 100;">Usi: 4</h6>
             </ul>
+
+            <div class="dotari">
+              <hr/>
+              <p class="h6">Scaune fata inclazite</p>
+              <p class="h6">Senzori parcare</p>
+              <p class="h6">Camera video marsarier</p>
+              <p class="h6">Pilot automat adaptiv</p>
+              <p class="h6">Climatizare automata</p>
+              <p class="h6">Geamuri electrice</p>
+              <p class="h6">Asistent unghi mort</p>
+              <p class="h6">Apple CarPlay / Anddoid Auto</p>
+              <hr/>
+            </div>
+
+            <button type="button"  id="show-dotari" onclick="toggleDotari()" class="btn btn-dark"
+          style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">Vezi dotarile</button>
           </div>
         </div>
+
+        <div class="col-sm-6" style="padding: 0 !important;">
+          <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+            <div class="card-header" onclick="toggleFirstPlan()"
+              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
+              <strong style="color: white;">Travis Go</strong>
+              <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
+            </div>
+
+            <div class="card-body first-plan" id="plan">
+              <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
+                  class="badge text-bg-warning" style="padding: 6px 12px;">
+                  <p class="lead">Cel mai cautat</p>
+                </span></h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
+              <ul class="list-group" style="height: 100%; text-align: left;">
+                <hr />
+                <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
+                <hr />
+                <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                  inchiriere</h6>
+                <hr />
+                <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
+                <hr />
+                <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
+                <hr />
+                <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
+                <hr />
+                <h6 style="font-weight: 100;">TVA 19%</h6>
+                <hr />
+                <h6 style="font-weight: 100;">taxa spalare auto</h6>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6" style="padding: 0 !important;">
+          <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+            <div class="card-header" onclick="toggleSecondPlan()"
+              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
+              <strong style="color: white;">Travis Plus</strong>
+              <strong style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
+            </div>
+            <div class="card-body second-plan" id="plan">
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 400€</h6>
+              <ul class="list-group" style="height: 100%; text-align: left;">
+                <hr />
+                <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
+                <hr />
+                <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                  inchiriere</h6>
+                <hr />
+                <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
+                <hr />
+                <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
+                <hr />
+                <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
+                <hr />
+                <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
+                <hr />
+                <h6 style="font-weight: 100;">TVA 19%</h6>
+                <hr />
+                <h6 style="font-weight: 100;">taxa spalare auto</h6>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
     </div>
   </div>
-</div>
+
 </div>
 
 
@@ -271,63 +281,63 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  
+
   <script src="https://car.travis.ro/vue/vue.global.js"></script>
 
 </body>
 
 <style lang="scss">
-ul li {
-  margin-bottom: 0px;
-}
+  ul li {
+    margin-bottom: 0px;
+  }
 
-p {
-  margin-bottom: 0px;
-}
+  p {
+    margin-bottom: 0px;
+  }
 
-ion-icon {
-  --ionicon-stroke-width: 16px;
-}
+  ion-icon {
+    --ionicon-stroke-width: 16px;
+  }
 
-:root {
-  --tag-color-one: rgb(255, 203, 5);
-  --tag-color-text-one: rgb(33, 37, 41);
-  --tag-color-text-two: rgba(33, 37, 41, 0.75);
-}
+  :root {
+    --tag-color-one: rgb(255, 203, 5);
+    --tag-color-text-one: rgb(33, 37, 41);
+    --tag-color-text-two: rgba(33, 37, 41, 0.75);
+  }
 
-.all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.car-preview-card {
-  border-radius: 24px !important;
-}
+  .car-preview-card {
+    border-radius: 24px !important;
+  }
 
-.image-preview {
-  border-radius: 16px !important;
-  margin-bottom: 1rem;
-}
+  .image-preview {
+    border-radius: 16px !important;
+    margin-bottom: 1rem;
+  }
 
-.tag {
-  font-size: 1rem;
-  padding: 4px 8px;
-  border-radius: 16px;
-  margin-right: 5px;
-}
+  .tag {
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 16px;
+    margin-right: 5px;
+  }
 
-.approved {
+  .approved {
     background-color: var(--tag-color-one);
     color: var(--tag-color-text-one);
   }
@@ -338,97 +348,110 @@ ion-icon {
     border: 1px solid var(--tag-color-one);
   }
 
-.tags {
-  width: 100%;
-  text-align: left;
-  margin-top: 1.2rem;
-}
+  .tags {
+    width: 100%;
+    text-align: left;
+    margin-top: 1.2rem;
+  }
 
-.eticheta {
-  width: 48px;
-  height: 48px;
-}
+  .eticheta {
+    width: 48px;
+    height: 48px;
+  }
 
-.slider {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
 
-    .indicators {
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-    }
+  .indicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
 
-    .indicator {
-        width: 1rem;
-        height: 1rem;
-        background-color: #bbb;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        border: 2px solid white;
-        transition: 0.3s all ease;
-    }
+  .indicator {
+    width: 1rem;
+    height: 1rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: 0.3s all ease;
+  }
 
-    .indicator.active {
-      background-color: var(--tag-color-one);
-    }
-    #plan {
-      display: none;
-    }
+  .indicator.active {
+    background-color: var(--tag-color-one);
+  }
 
-    .card-header:hover{
-      cursor: pointer;
-    }
+  #plan {
+    display: none;
+  }
 
-    .row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
+  .card-header:hover {
+    cursor: pointer;
+  }
 
-    .column {
-      flex: 1;
-    }
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 
-    .icon {
-      margin-right: 5px; /* Adjust as needed for spacing between text and icon */
-    }
+  .column {
+    flex: 1;
+  }
 
-    .dotari {
-      display: none;
-    }
+  .icon {
+    margin-right: 5px;
+    /* Adjust as needed for spacing between text and icon */
+  }
 
-    #show-dotari:hover {
-      cursor: pointer;
-    }
+  .dotari {
+    display: none;
+  }
+
+  #show-dotari:hover {
+    cursor: pointer;
+  }
+
+  .align-horizontal {
+    display: flex;
+    align-items: center;
+  }
+
+  .align-horizontal ul {
+    margin-left: 10px;
+    /* Adjust the margin as needed */
+  }
 </style>
 
 <script>
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-  document.getElementById('accordionButton').addEventListener('click', function() {
+  document.getElementById('accordionButton').addEventListener('click', function () {
     // Simulate click on the accordion button
     document.querySelector('[data-bs-toggle="collapse"]').click();
   });
 
   function toggleFirstPlan() {
-      $('.first-plan').slideToggle();
-    }
+    $('.first-plan').slideToggle();
+  }
 
-    function toggleSecondPlan() {
-      $('.second-plan').slideToggle();
-    }
+  function toggleSecondPlan() {
+    $('.second-plan').slideToggle();
+  }
 
-    function toggleDotari() {
-        $('.dotari').slideToggle(function () {
-            var buttonText = $(this).is(':visible') ? 'Ascunde dotarile' : 'Vezi dotarile';
-            $('#show-dotari').text(buttonText);
-        });}
+  function toggleDotari() {
+    $('.dotari').slideToggle(function () {
+      var buttonText = $(this).is(':visible') ? 'Ascunde dotarile' : 'Vezi dotarile';
+      $('#show-dotari').text(buttonText);
+    });
+  }
 </script>
 
 </html>
