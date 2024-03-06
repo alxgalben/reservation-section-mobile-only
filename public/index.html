@@ -425,8 +425,10 @@ ion-icon {
     }
 
     function toggleDotari() {
-      $('.dotari').slideToggle();
-    }
+        $('.dotari').slideToggle(function () {
+            var buttonText = $(this).is(':visible') ? 'Ascunde dotarile' : 'Vezi dotarile';
+            $('#show-dotari').text(buttonText);
+        });}
 </script>
 
 </html>
