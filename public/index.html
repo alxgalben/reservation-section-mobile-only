@@ -158,7 +158,7 @@
           <div class="card-body">
             <h5 class="card-title">Volkswagen Touareg (4x4 Automat) Diesel</h5>
             <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
-            <hr/>
+            <hr />
 
             <ul class="list-group" style="height: 100%; text-align: left;">
               <h6 style="font-weight: 100;">An: 2022</h6>
@@ -170,7 +170,7 @@
             </ul>
 
             <div class="dotari">
-              <hr/>
+              <hr />
               <p class="h6">Scaune fata inclazite</p>
               <p class="h6">Senzori parcare</p>
               <p class="h6">Camera video marsarier</p>
@@ -179,28 +179,29 @@
               <p class="h6">Geamuri electrice</p>
               <p class="h6">Asistent unghi mort</p>
               <p class="h6">Apple CarPlay / Anddoid Auto</p>
-              <hr/>
+              <hr />
             </div>
 
-            <button type="button"  id="show-dotari" onclick="toggleDotari()" class="btn btn-dark"
-          style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">Vezi dotarile</button>
+            <button type="button" id="show-dotari" onclick="toggleDotari()" class="btn btn-dark"
+              style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">Vezi
+              dotarile</button>
           </div>
         </div>
 
         <div class="col-sm-6" style="padding: 0 !important;">
-          <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+          <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
             <div class="card-header" onclick="toggleFirstPlan()"
               style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
               <strong style="color: white;">Travis Go</strong>
               <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
             </div>
 
-            <div class="card-body first-plan" id="plan">
+            <div class="card-body travis-plan first-plan">
               <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
                   class="badge text-bg-warning" style="padding: 6px 12px;">
                   <p class="lead">Cel mai cautat</p>
                 </span></h5>
-                <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
+              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
               <ul class="list-group" style="height: 100%; text-align: left;">
                 <hr />
                 <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
@@ -223,6 +224,9 @@
                 <h6 style="font-weight: 100;">TVA 19%</h6>
                 <hr />
                 <h6 style="font-weight: 100;">taxa spalare auto</h6>
+                <hr />
+                <button type="submit" onclick="selectPlan('plan1')" class="btn btn-dark"
+                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
               </ul>
             </div>
           </div>
@@ -230,13 +234,13 @@
         </div>
 
         <div class="col-sm-6" style="padding: 0 !important;">
-          <div class="card mb-3" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+          <div class="card mb-3"  id="plan2" style="position: relative; overflow: hidden; border-radius: 24px !important;">
             <div class="card-header" onclick="toggleSecondPlan()"
               style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
               <strong style="color: white;">Travis Plus</strong>
               <strong style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
             </div>
-            <div class="card-body second-plan" id="plan">
+            <div class="card-body travis-plan second-plan">
               <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 400€</h6>
               <ul class="list-group" style="height: 100%; text-align: left;">
                 <hr />
@@ -260,6 +264,9 @@
                 <h6 style="font-weight: 100;">TVA 19%</h6>
                 <hr />
                 <h6 style="font-weight: 100;">taxa spalare auto</h6>
+                <hr />
+                <button type="submit" onclick="selectPlan('plan2')" class="btn btn-dark"
+                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
               </ul>
             </div>
           </div>
@@ -387,7 +394,7 @@
     background-color: var(--tag-color-one);
   }
 
-  #plan {
+  .travis-plan {
     display: none;
   }
 
@@ -427,6 +434,10 @@
     margin-left: 10px;
     /* Adjust the margin as needed */
   }
+
+  .selected-plan {
+        border: 2px solid rgb(255, 203, 5);
+    }
 </style>
 
 <script>
@@ -434,7 +445,6 @@
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
   document.getElementById('accordionButton').addEventListener('click', function () {
-    // Simulate click on the accordion button
     document.querySelector('[data-bs-toggle="collapse"]').click();
   });
 
@@ -452,6 +462,13 @@
       $('#show-dotari').text(buttonText);
     });
   }
+
+  function selectPlan(planId) {
+        $('#' + planId).toggleClass('selected-plan');
+
+        const otherPlanId = (planId === 'plan1') ? 'plan2' : 'plan1';
+        $('#' + otherPlanId).removeClass('selected-plan');
+    }
 </script>
 
 </html>
