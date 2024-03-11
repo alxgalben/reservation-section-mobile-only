@@ -10,9 +10,9 @@
 
 </head>
 <div class="all" style="height: 100vh;">
-  <div class="car-preview-card card" style="width: 22.2rem; height: 37.2rem;">
+  <div class="car-preview-card card" style="width: 22.2rem; height: 39rem;">
     <div class="card-body">
-      <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative;">
+      <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative; margin-bottom: 0 !important;">
         <ul style="list-style: none; padding: 16px; display: flex; justify-content: space-between; z-index: 1000;">
           <li>
             <img src="coming_soon.jpeg" alt="Coming Soon" class="eticheta">
@@ -50,7 +50,7 @@
           <!-- Add more indicators as needed based on the number of images -->
         </div>
       </div>
-
+      <p class="lead" style="font-size: .8rem; display: flex; align-items: center; margin-bottom: 1rem !important;"><ion-icon name="information-circle-outline"></ion-icon>Imagini cu titul informativ.</p class="lead">
 
       <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
         <div>
@@ -160,25 +160,49 @@
             <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
             <hr />
 
-            <ul class="list-group" style="height: 100%; text-align: left;">
-              <h6 style="font-weight: 100;">An: 2022</h6>
-              <h6 style="font-weight: 100;">Combustibil: Benzina</h6>
-              <h6 style="font-weight: 100;">Motorizare: 1998 cmc 122 CP</h6>
-              <h6 style="font-weight: 100;">Transmisie: Automata</h6>
-              <h6 style="font-weight: 100;">Locuri :5</h6>
-              <h6 style="font-weight: 100;">Usi: 4</h6>
-            </ul>
+            <div class="tags">
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="calendar" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">2024</span>
+              </span>
+      
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="person" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">5</span>
+              </span>
+      
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="analytics" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">Automatic</span>
+              </span>
+      
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="log-out" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">4</span>
+              </span>
+      
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="construct" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">Diesel</span>
+              </span>
+
+              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                <ion-icon name="cog-outline" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                <span style="font-size: 14px;">1998 cmc 122 CP</span>
+              </span>
+            </div>
+
+            <hr />
 
             <div class="dotari">
-              <hr />
-              <p class="h6">Scaune fata inclazite</p>
-              <p class="h6">Senzori parcare</p>
-              <p class="h6">Camera video marsarier</p>
-              <p class="h6">Pilot automat adaptiv</p>
-              <p class="h6">Climatizare automata</p>
-              <p class="h6">Geamuri electrice</p>
-              <p class="h6">Asistent unghi mort</p>
-              <p class="h6">Apple CarPlay / Android Auto</p>
+              <p class="lead" style="font-size: 1.1rem;">Scaune fata inclazite</p>
+              <p class="lead" style="font-size: 1.1rem;">Senzori parcare</p>
+              <p class="lead" style="font-size: 1.1rem;">Camera video marsarier</p>
+              <p class="lead" style="font-size: 1.1rem;">Pilot automat adaptiv</p>
+              <p class="lead" style="font-size: 1.1rem;">Climatizare automata</p>
+              <p class="lead" style="font-size: 1.1rem;">Geamuri electrice</p>
+              <p class="lead" style="font-size: 1.1rem;">Asistent unghi mort</p>
+              <p class="lead" style="font-size: 1.1rem;">Apple CarPlay / Android Auto</p>
               <hr />
             </div>
 
@@ -191,43 +215,43 @@
         <div class="col-sm-6" style="padding: 0 !important;">
           <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
             <div class="card-header" onclick="toggleFirstPlan()"
-              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
-              <strong style="color: white;">Travis Go</strong>
+              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
+              <strong style="color: white;">STANDARD</strong>
               <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
-              <ion-icon name="arrow-down-circle" style="color: #fff; margin-left: .5rem;"></ion-icon>
+              <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
             </div>
 
-            <div class="card-body travis-plan first-plan">
+            <div class="card-body travis-plan first-plan" style="background-color: #e5d3ed !important; color: #58236f;">
               <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
                   class="badge text-bg-warning" style="padding: 6px 12px;">
                   <p class="lead">Cel mai cautat</p>
                 </span></h5>
               <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
-              <ul class="list-group" style="height: 100%; text-align: left;">
-                <hr />
-                <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
-                <hr />
-                <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+              <ul class="list-group plan-list" style="height: 100%; text-align: left;">
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
                   inchiriere</h6>
-                <hr />
-                <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
-                <hr />
-                <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
-                <hr />
-                <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
-                <hr />
-                <h6 style="font-weight: 100;">TVA 19%</h6>
-                <hr />
-                <h6 style="font-weight: 100;">taxa spalare auto</h6>
-                <hr />
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>cauciucuri de iarna</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
+                <hr style="margin: .5rem !important;">
                 <button type="submit" onclick="selectPlan('plan1')" class="btn btn-dark"
-                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
+                  style="width: 100%; color: rgb(255, 203, 5); background-color: #58236f; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
               </ul>
             </div>
           </div>
@@ -237,38 +261,38 @@
         <div class="col-sm-6" style="padding: 0 !important;">
           <div class="card mb-3"  id="plan2" style="position: relative; overflow: hidden; border-radius: 24px !important;">
             <div class="card-header" onclick="toggleSecondPlan()"
-              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
-              <strong style="color: white;">Travis Plus</strong>
+              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
+              <strong style="color: white;">PLUS</strong>
               <strong style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
-              <ion-icon name="arrow-down-circle" style="color: #fff; margin-left: .5rem;"></ion-icon>
+              <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
             </div>
-            <div class="card-body travis-plan second-plan">
+            <div class="card-body travis-plan second-plan" style="background-color: #9dc8e3 !important; color: #1d4660;">
               <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 400€</h6>
-              <ul class="list-group" style="height: 100%; text-align: left;">
-                <hr />
-                <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
-                <hr />
-                <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+              <ul class="list-group plan-list" style="height: 100%; text-align: left;">
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
                   inchiriere</h6>
-                <hr />
-                <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
-                <hr />
-                <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
-                <hr />
-                <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
-                <hr />
-                <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
-                <hr />
-                <h6 style="font-weight: 100;">TVA 19%</h6>
-                <hr />
-                <h6 style="font-weight: 100;">taxa spalare auto</h6>
-                <hr />
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>cauciucuri de iarna</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
+                <hr style="margin: .5rem !important;">
+                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
+                <hr style="margin: .5rem !important;">
                 <button type="submit" onclick="selectPlan('plan2')" class="btn btn-dark"
-                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
+                  style="width: 100%; color: rgb(255, 203, 5); background-color: #1d4660; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
               </ul>
             </div>
           </div>
@@ -439,6 +463,13 @@
 
   .selected-plan {
         border: 2px solid rgb(255, 203, 5);
+    }
+
+    .plan-list h6 {
+      display: flex;
+      align-items: center;
+      font-weight: 100;
+      margin: 0;
     }
 </style>
 
