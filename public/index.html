@@ -297,7 +297,85 @@
         </div>
 
         <div id="target">
-          <h1>detalii despre pret, optiuni, etc</h1>
+          <div class="col-sm-6" style="padding: 0 !important;">
+            <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+              <div class="card-header" onclick="toggleFirstPlan()"
+                style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
+                <strong style="color: white;">STANDARD</strong>
+                <strong style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
+                <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
+              </div>
+  
+              <div class="card-body travis-plan first-plan" style="background-color: #e5d3ed !important; color: #58236f;">
+                <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
+                    class="badge text-bg-warning" style="padding: 6px 12px;">
+                    <p class="lead">Cel mai cautat</p>
+                  </span></h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
+                <ul class="list-group plan-list" style="height: 100%; text-align: left;">
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                    inchiriere</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>cauciucuri de iarna</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
+                  <hr style="margin: .5rem !important;">
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+        
+            <div class="col-md-4" style="max-height: 850px;">
+            <div class="card h-100">
+              <div class="card-header bg-light bg-gradient"
+                style="text-align: center; font-weight: bold; font-size: 30px;">Detaliile rezervarii</div>
+                <div class="card-body bg-light bg-gradient d-flex flex-column align-items-center justify-content-center" style="text-align: center; overflow-y: auto;">
+                  <dl class="row">         
+                    <dt class="col-sm-3">Auto selectat</dt>
+                    <dd class="col-sm-9">Dacia Sandero Stepway (Automat) sau similar | mini-SUV</dd>
+        
+                    <dt class="col-sm-3">Preluare</dt>
+                    <dd class="col-sm-9">Iasi, 17/01/2024, 12:00</dd>
+        
+                    <dt class="col-sm-3">Auto selectat</dt>
+                    <dd class="col-sm-9">Iasi, 20/01/2024, 12:00</dd>
+        
+                    <dt class="col-sm-3">Perioada inchiriere:</dt>
+                    <dd class="col-sm-9">3 zi(le)</dd>
+        
+                    <dt class="col-sm-3">Locatie auto</dt>
+                    <dd class="col-sm-9">Iasi</dd>
+        
+                    <dt class="col-sm-3">Garantie/fransiza</dt>
+                    <dd class="col-sm-9">520€</dd>
+                  </dl>
+        
+                  <p>Tarifele afisate sunt valabile pentru intreaga perioada de inchiriere.</p>
+        
+                  <div class="alert alert-warning" role="alert">
+                    <h2>Tarif total: 129€</h2>
+                  </div>
+        
+                  <button type="button" class="btn btn-warning">CONTINUA</button>
+              </div>
+            </div>
+            </div>
           <div class="triggers">
             <button id="targetTriggerUp" title="Only slides up the target element" style="display: none;">slideUp</button>
             <button id="targetTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
@@ -367,83 +445,7 @@
                   </div>
               </div>
         </div>
-        
-            <div class="col-md-4" style="max-height: 850px;">
-            <div class="card h-100">
-              <div class="card-header bg-light bg-gradient"
-                style="text-align: center; font-weight: bold; font-size: 30px;">Budget</div>
-                <div class="card-body bg-light bg-gradient d-flex flex-column align-items-center justify-content-center" style="text-align: center; overflow-y: auto;">
-                  <ul class="list-group" style="height: 100%; text-align: left;">
-                    <h4 style="font-weight: 400; text-align: center !important;">Tariful include</h4>
-                    <hr/>
-                    <h6 style="font-weight: 100;">3 zi(le) inchiriere in Romania</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">675 km (+0.3 €/ km suplimentar)</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de inchiriere</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">asistenta telefonica in caz de urgenta 24/7</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">cauciucuri de iarna</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">taxa de drum (rovinieta)</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">modificare gratuita a rezervarii</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">TVA 19%</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">taxa spalare auto</h6>
-                    <hr/>
-                    <h4 style="font-weight: 400; text-align: center !important;">Tariful include</h4>
-                    <hr/>
-                    <h6 style="font-weight: 100;">carburant</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">taxe parcare/pod</h6>
-                    <hr/>
-                    <h6 style="font-weight: 100;">amenzi de circulatie</h6>
-                    <hr/>
-                  </ul>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-md-4" style="max-height: 850px;">
-            <div class="card h-100">
-              <div class="card-header bg-light bg-gradient"
-                style="text-align: center; font-weight: bold; font-size: 30px;">Detaliile rezervarii</div>
-                <div class="card-body bg-light bg-gradient d-flex flex-column align-items-center justify-content-center" style="text-align: center; overflow-y: auto;">
-                  <dl class="row">         
-                    <dt class="col-sm-3">Auto selectat</dt>
-                    <dd class="col-sm-9">Dacia Sandero Stepway (Automat) sau similar | mini-SUV</dd>
-        
-                    <dt class="col-sm-3">Preluare</dt>
-                    <dd class="col-sm-9">Iasi, 17/01/2024, 12:00</dd>
-        
-                    <dt class="col-sm-3">Auto selectat</dt>
-                    <dd class="col-sm-9">Iasi, 20/01/2024, 12:00</dd>
-        
-                    <dt class="col-sm-3">Perioada inchiriere:</dt>
-                    <dd class="col-sm-9">3 zi(le)</dd>
-        
-                    <dt class="col-sm-3">Locatie auto</dt>
-                    <dd class="col-sm-9">Iasi</dd>
-        
-                    <dt class="col-sm-3">Garantie/fransiza</dt>
-                    <dd class="col-sm-9">520€</dd>
-                  </dl>
-        
-                  <p>Tarifele afisate sunt valabile pentru intreaga perioada de inchiriere.</p>
-        
-                  <div class="alert alert-warning" role="alert">
-                    <h2>Tarif total: 129€</h2>
-                  </div>
-        
-                  <button type="button" class="btn btn-warning">CONTINUA</button>
-              </div>
-            </div>
-            </div>
+      
         
           </div>
           <div class="triggers">
@@ -656,7 +658,7 @@
       background-color: #f8f9fa;
       padding: 15px;
       box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
+      z-index: 5000;
     }
 
     #slidingMenu:hover{
@@ -676,8 +678,10 @@
       background-color: #f8f9fa;
       padding: 15px;
       box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
+      z-index: 5000;
       display: none;
+      overflow-y: auto;
+      padding-bottom: 5rem;
     }
 
     #targetSecondStep {
