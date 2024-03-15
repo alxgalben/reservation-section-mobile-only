@@ -384,21 +384,21 @@
           <div class="row g-4 mx-auto justify-content-center" style="width: 90%; margin-top: 20px; margin-bottom: 25px;">
 
             <div
-          style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
-          <div class="align-horizontal">
-            <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
-              <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
-            </a>
-          </div>
-        </div>
+              style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
+              <div class="align-horizontal">
+                <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+                  <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
+                </a>
+              </div>
+            </div>
 
-            <div class="col-md-4" style="max-height: 900px;">
+            <div class="col-md-4" style="max-height: 900px; margin-top: 0px;">
               <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
                   <div class="card-header bg-light bg-gradient" style="text-align: center; font-weight: bold; font-size: 30px;">Servicii & Tarife</div>
                   <div class="card-body bg-light bg-gradient d-flex flex-column align-items-center justify-content-center" style="text-align: center; overflow-y: auto;">
                     <ul class="list-group" style="height: 100%; width: 100%; text-align: left;">
-                      <hr/>
-                      <div class="form-check form-switch">
+
+                      <div class="form-check form-switch" style="margin-top: .5rem;">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">protectie EXTRA Cover <strong>52€</strong></label>
                       </div>
@@ -443,11 +443,10 @@
                         <label class="form-check-label" for="flexSwitchCheckChecked">calatorie in strainatate (UE) <strong>52€</strong></label>
                       </div>
                       <hr/>
-                      <div class="form-check form-switch">
+                      <div class="form-check form-switch" style="margin-bottom: .5rem;">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                         <label class="form-check-label" for="flexSwitchCheckChecked">calatorie in Republica Moldova <strong>52€</strong></label>
                       </div>
-                      <hr/>
                     </ul>
                   </div>
               </div>
@@ -714,8 +713,8 @@
 </style>
 
 <script>
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
   document.getElementById('accordionButton').addEventListener('click', function () {
     document.querySelector('[data-bs-toggle="collapse"]').click();
@@ -737,24 +736,23 @@
   }
 
   function selectPlan(planId) {
-        $('#' + planId).toggleClass('selected-plan');
+    $('#' + planId).toggleClass('selected-plan');
 
-        const otherPlanId = (planId === 'plan1') ? 'plan2' : 'plan1';
-        $('#' + otherPlanId).removeClass('selected-plan');
-    }
+    const otherPlanId = (planId === 'plan1') ? 'plan2' : 'plan1';
+    $('#' + otherPlanId).removeClass('selected-plan');
+  }
 
-    $(document).ready(function() {
-    $('.accordion-button').on('click', function() {
+  $(document).ready(function () {
+    $('.accordion-button').on('click', function () {
       $('#slidingMenu').slideDown();
     });
 
-    $('#closeBtn').on('click', function() {
+    $('#closeBtn').on('click', function () {
       $('#slidingMenu').slideUp();
     });
   });
 
-
-  let slideUp = (target, duration=500) => {
+  let slideUp = (target, duration = 500) => {
     target.style.transitionProperty = 'height, margin, padding';
     target.style.transitionDuration = duration + 'ms';
     target.style.boxSizing = 'border-box';
@@ -766,7 +764,7 @@
     target.style.paddingBottom = 0;
     target.style.marginTop = 0;
     target.style.marginBottom = 0;
-    window.setTimeout( () => {
+    window.setTimeout(() => {
       target.style.display = 'none';
       target.style.removeProperty('height');
       target.style.removeProperty('padding-top');
@@ -776,11 +774,10 @@
       target.style.removeProperty('overflow');
       target.style.removeProperty('transition-duration');
       target.style.removeProperty('transition-property');
-      //alert("!");
     }, duration);
-  }
+  };
 
-  let slideDown = (target, duration=500) => {
+  let slideDown = (target, duration = 500) => {
     target.style.removeProperty('display');
     let display = window.getComputedStyle(target).display;
 
@@ -804,62 +801,67 @@
     target.style.removeProperty('padding-bottom');
     target.style.removeProperty('margin-top');
     target.style.removeProperty('margin-bottom');
-    window.setTimeout( () => {
+    window.setTimeout(() => {
       target.style.removeProperty('height');
       target.style.removeProperty('overflow');
       target.style.removeProperty('transition-duration');
       target.style.removeProperty('transition-property');
     }, duration);
-  }
-   let slideToggle = (target, duration = 500) => {
-    if (window.getComputedStyle(target).display === 'none') {
-      return slideDown(target, duration);
-    } else {
-      return slideUp(target, duration);
+  };
+
+  let slideToggle = (target, duration = 500) => {
+    return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
+  };
+
+  let speedAnimation = 400;
+  let targetId = document.getElementById("target");
+
+  let slideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(targetId, speedAnimation));
+
+  slideBtnClick('targetTriggerUp', slideUp);
+  slideBtnClick('targetTriggerDown', slideDown);
+  slideBtnClick('targetTriggerToggle', slideToggle);
+
+  // For the global triggers
+  let globalTargetId = document.getElementById("target");
+
+  let globalSlideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(globalTargetId, speedAnimation));
+
+  globalSlideBtnClick('globalTriggerUp', slideUp);
+  globalSlideBtnClick('globalTriggerDown', slideDown);
+  globalSlideBtnClick('globalTriggerToggle', slideToggle);
+
+  let target = document.getElementById("target");
+  let slidingMenu = document.getElementById("slidingMenu");
+  let targetSecondStep = document.getElementById("targetSecondStep");
+
+  slidingMenu.addEventListener('click', (event) => {
+    if (event.target === slidingMenu) {
+      if (target.style.display === 'block') {
+        targetSecondStep.style.display = 'none';
+      }
+      slideToggle(target, speedAnimation);
     }
-  }
-   
-// ====  
-  
-let speedAnimation = 400;
-let targetId = document.getElementById("target");
+  });
 
-let slideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(targetId, speedAnimation));
+  slidingMenu.querySelector('button').addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (target.style.display === 'block') {
+      slideToggle(target, speedAnimation);
+      targetSecondStep.style.display = 'block';
+    }
+  });
 
-slideBtnClick('targetTriggerUp', slideUp);
-slideBtnClick('targetTriggerDown', slideDown);
-slideBtnClick('targetTriggerToggle', slideToggle);
+  let nextButtonForSecondStep = document.getElementById("nextButtonForSecondStep");
 
-// For the global triggers
-let globalTargetId = document.getElementById("target");
-
-let globalSlideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(globalTargetId, speedAnimation));
-
-globalSlideBtnClick('globalTriggerUp', slideUp);
-globalSlideBtnClick('globalTriggerDown', slideDown);
-globalSlideBtnClick('globalTriggerToggle', slideToggle);
-
-
-let target = document.getElementById("target");
-let slidingMenu = document.getElementById("slidingMenu");
-
-slidingMenu.addEventListener('click', () => slideToggle(target, speedAnimation));
-
-
-
-let targetSecondStep = document.getElementById("targetSecondStep");
-let nextButtonForSecondStep = document.getElementById("nextButtonForSecondStep");
-
-nextButtonForSecondStep.addEventListener('click', () => {
+  nextButtonForSecondStep.addEventListener('click', () => {
     targetSecondStep.style.display = 'block';
-});
-
-
-
-
-
-
-
+  });
 </script>
+
+
+
+
+
 
 </html>
