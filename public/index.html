@@ -298,7 +298,7 @@
 
         <div id="target">
         
-            <div class="col-md-4" style="max-height: 850px;">
+            <div class="col-md-4" style="max-height: 850px; padding-top: 5rem;">
             <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
               <div class="card-header bg-light bg-gradient"
                 style="text-align: center; font-weight: bold; font-size: 30px;" >Detaliile rezervarii</div>
@@ -372,8 +372,8 @@
                     <h2>Tarif total: 129€</h2>
                   </div> -->
         
-                  <button type="button" id="accordionButton" class="btn btn-dark"
-                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: 1.2rem;">CONTINUA</button>
+                  <!-- <button type="button" id="accordionButton" class="btn btn-dark"
+                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: 1.2rem;">CONTINUA</button> -->
               </div>
             </div>
             </div>
@@ -386,7 +386,7 @@
             <div
               style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
               <div class="align-horizontal">
-                <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+                <a href="" class="text-reset" id="backButtonInSecondStep" style="color: black;">
                   <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
                 </a>
               </div>
@@ -678,7 +678,7 @@
               <button id="globalTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
               <button id="globalTriggerToggle" title="Toggle slide-up and slide-down states for the target">slideToggle</button>
             </div>
-            <span class="btn btn-warning next" id="nextButtonForSecondStep"><strong>PASUL URMATOR</strong></span>
+            <span class="btn btn-warning next" id="nextButton"><strong>PASUL URMATOR</strong></span>
         </div>
 
       </div>
@@ -686,9 +686,6 @@
   </div>
 
 </div>
-
-
-
 
 <body>
 
@@ -1049,7 +1046,6 @@
     return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
   };
 
-  // ====  
 
   let speedAnimation = 400;
   let targetId = document.getElementById("target");
@@ -1060,7 +1056,6 @@
   slideBtnClick('targetTriggerDown', slideDown);
   slideBtnClick('targetTriggerToggle', slideToggle);
 
-  // For the global triggers
   let globalTargetId = document.getElementById("target");
 
   let globalSlideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(globalTargetId, speedAnimation));
@@ -1076,78 +1071,64 @@
   let targetFourthStep = document.getElementById("targetFourthStep");
 
   slidingMenu.addEventListener('click', (event) => {
-  // Check if the clicked element is the slidingMenu itself, not its children
-  if (event.target === slidingMenu) {
-    if (target.style.display === 'block') {
-      if (targetSecondStep.style.display === 'block') {
-        targetSecondStep.style.display = 'none';
-        targetThirdStep.style.display = 'block';
-      } else if (targetThirdStep.style.display === 'block') {
-        targetThirdStep.style.display = 'none';
-        targetFourthStep.style.display = 'block'; // Display the fourth step
+    if (event.target === slidingMenu) {
+      if (target.style.display === 'block') {
+        slideToggle(target, speedAnimation);
+        if (targetSecondStep.style.display === 'block') {
+          targetSecondStep.style.display = 'none';
+          targetThirdStep.style.display = 'none';
+          targetFourthStep.style.display = 'none';
+        } else if (targetThirdStep.style.display === 'block') {
+          targetThirdStep.style.display = 'none';
+          targetFourthStep.style.display = 'none';
+        }
       } else {
-        targetSecondStep.style.display = 'block';
+        slideToggle(target, speedAnimation);
+        targetSecondStep.style.display = 'none';
         targetThirdStep.style.display = 'none';
         targetFourthStep.style.display = 'none';
       }
-    } else {
+    }
+  });
+
+  slidingMenu.querySelector('button').addEventListener('click', (event) => {
+    event.stopPropagation();
+    if (target.style.display === 'block') {
+      slideToggle(target, speedAnimation);
       targetSecondStep.style.display = 'none';
       targetThirdStep.style.display = 'none';
       targetFourthStep.style.display = 'none';
     }
-    slideToggle(target, speedAnimation);
-  }
-});
+  });
 
-// Prevent propagation when the button inside slidingMenu is clicked
-slidingMenu.querySelector('button').addEventListener('click', (event) => {
-  event.stopPropagation();
-  if (target.style.display === 'block') {
-    slideToggle(target, speedAnimation);
-    targetSecondStep.style.display = 'block';
-    targetThirdStep.style.display = 'none';
-    targetFourthStep.style.display = 'none'; // Ensure the fourth step is hidden initially
-  }
-});
+  let nextButton = document.getElementById("nextButton");
+  let currentStep = 1; // Define a variable to keep track of the current step
 
-  let nextButtonForSecondStep = document.getElementById("nextButtonForSecondStep");
-  let nextButtonForThirdStep = document.getElementById("nextButtonForThirdStep");
+  nextButton.addEventListener('click', () => {
+    switch (currentStep) {
+      case 1:
+        target.style.display = 'none'; // Hide target
+        targetSecondStep.style.display = 'block'; // Show targetSecondStep
+        break;
+      case 2:
+        targetSecondStep.style.display = 'none'; // Hide targetSecondStep
+        targetThirdStep.style.display = 'block'; // Show targetThirdStep
+        break;
+      case 3:
+        targetThirdStep.style.display = 'none'; // Hide targetThirdStep
+        targetFourthStep.style.display = 'block'; // Show targetFourthStep
+        break;
+    }
 
-  nextButtonForSecondStep.addEventListener('click', () => {
-  targetSecondStep.style.display = 'none';
-  targetThirdStep.style.display = 'block';
-  targetFourthStep.style.display = 'none'; // Ensure the fourth step is hidden when moving to the third step
-});
+    currentStep++; // Increment current step
 
-nextButtonForThirdStep.addEventListener('click', () => {
-  targetThirdStep.style.display = 'none';
-  targetFourthStep.style.display = 'block';
-});
-
-// Handle navigation back to the third step from the fourth step if needed
-document.getElementById('backToThirdStepButton').addEventListener('click', () => {
-  targetThirdStep.style.display = 'block';
-  targetFourthStep.style.display = 'none';
-});
-
-  let currentStep = 1; // Track the current step
-
-  document.getElementById('pasulUrmatorButton').addEventListener('click', () => {
-    if (currentStep === 1) {
-      targetSecondStep.style.display = 'block';
-      currentStep = 2;
-    } else if (currentStep === 2) {
-      targetSecondStep.style.display = 'none';
-      targetThirdStep.style.display = 'block';
-      currentStep = 3;
+    // Check if the current step exceeds the maximum step
+    if (currentStep > 3) {
+      currentStep = 1; // Reset current step to 1
     }
   });
+
 </script>
-
-
-
-
-
 
 
 
