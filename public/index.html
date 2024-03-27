@@ -468,7 +468,7 @@
             <div
               style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
               <div class="align-horizontal">
-                <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+                <a href="" class="text-reset" id="backButtonInThirdStep" style="color: black;">
                   <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
                 </a>
               </div>
@@ -654,7 +654,7 @@
             <div
               style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
               <div class="align-horizontal">
-                <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+                <a href="" class="text-reset" id="backButtonInFourthStep" style="color: black;">
                   <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
                 </a>
               </div>
@@ -1070,26 +1070,24 @@
   let targetThirdStep = document.getElementById("targetThirdStep");
   let targetFourthStep = document.getElementById("targetFourthStep");
 
+  let lastActiveStep = null;
+
   slidingMenu.addEventListener('click', (event) => {
-    if (event.target === slidingMenu) {
-      if (target.style.display === 'block') {
-        slideToggle(target, speedAnimation);
-        if (targetSecondStep.style.display === 'block') {
-          targetSecondStep.style.display = 'none';
-          targetThirdStep.style.display = 'none';
-          targetFourthStep.style.display = 'none';
-        } else if (targetThirdStep.style.display === 'block') {
-          targetThirdStep.style.display = 'none';
-          targetFourthStep.style.display = 'none';
-        }
-      } else {
-        slideToggle(target, speedAnimation);
-        targetSecondStep.style.display = 'none';
-        targetThirdStep.style.display = 'none';
-        targetFourthStep.style.display = 'none';
+  if (event.target === slidingMenu) {
+    if (target.style.display === 'block') {
+      // Hide the target if it's currently shown
+      slideToggle(target, speedAnimation);
+      if (lastActiveStep) {
+        lastActiveStep.style.display = 'block'; // Show the last active step
       }
+    } else {
+      // Show the target
+      slideToggle(target, speedAnimation);
+      lastActiveStep = null; // Reset last active step
     }
-  });
+  }
+});
+
 
   slidingMenu.querySelector('button').addEventListener('click', (event) => {
     event.stopPropagation();
@@ -1128,9 +1126,33 @@
     }
   });
 
+  // Function to handle going back to the previous step
+  function goBack(event) {
+    event.stopPropagation(); // Stop event propagation to prevent offcanvas from closing
+    switch (currentStep) {
+      case 2:
+        targetSecondStep.style.display = 'none'; // Hide targetSecondStep
+        target.style.display = 'block'; // Show target
+        currentStep--; // Decrement current step
+        break;
+      case 3:
+        targetThirdStep.style.display = 'none'; // Hide targetThirdStep
+        targetSecondStep.style.display = 'block'; // Show targetSecondStep
+        currentStep--; // Decrement current step
+        break;
+      case 4:
+        targetFourthStep.style.display = 'none'; // Hide targetFourthStep
+        targetThirdStep.style.display = 'block'; // Show targetThirdStep
+        currentStep--; // Decrement current step
+        break;
+    }
+  }
+
+  // Add event listeners to back buttons in each step
+  document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
+  document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
+  document.getElementById('backButtonInFourthStep').addEventListener('click', goBack);
 </script>
-
-
 
 
 </html>
