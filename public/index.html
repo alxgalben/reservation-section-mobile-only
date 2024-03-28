@@ -296,9 +296,9 @@
           </div>
         </div>
 
-        <div id="target">
+        <div id="target" style="padding-bottom: 5rem;">
         
-            <div class="col-md-4" style="max-height: 850px; padding-top: 5rem;">
+            <div class="col-md-4" style="max-height: 850px; padding-top: 5rem; margin-bottom: 23rem;">
             <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
               <div class="card-header bg-light bg-gradient"
                 style="text-align: center; font-weight: bold; font-size: 30px;" >Detaliile rezervarii</div>
@@ -1073,19 +1073,18 @@
   let lastActiveStep = null;
 
   slidingMenu.addEventListener('click', (event) => {
-  if (event.target === slidingMenu) {
-    if (target.style.display === 'block') {
-      slideToggle(target, speedAnimation);
-      if (lastActiveStep) {
-        lastActiveStep.style.display = 'block';
+    if (event.target === slidingMenu) {
+      if (target.style.display === 'block') {
+        slideToggle(target, speedAnimation);
+        if (lastActiveStep) {
+          lastActiveStep.style.display = 'block';
+        }
+      } else {
+        slideToggle(target, speedAnimation);
+        lastActiveStep = null;
       }
-    } else {
-      slideToggle(target, speedAnimation);
-      lastActiveStep = null;
     }
-  }
-});
-
+  });
 
   slidingMenu.querySelector('button').addEventListener('click', (event) => {
     event.stopPropagation();
@@ -1123,31 +1122,53 @@
     }
   });
 
+  // Function to handle going back to the previous step
   function goBack(event) {
-    event.stopPropagation();
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    event.stopPropagation(); // Stop event propagation to prevent off-canvas from closing
+
+    // Decrement the current step and navigate accordingly
     switch (currentStep) {
       case 2:
         targetSecondStep.style.display = 'none';
-        target.style.display = 'block';
-        currentStep--;
+        slidingMenu.style.display = 'block'; // Show the off-canvas content
         break;
       case 3:
         targetThirdStep.style.display = 'none';
         targetSecondStep.style.display = 'block';
-        currentStep--;
         break;
       case 4:
         targetFourthStep.style.display = 'none';
         targetThirdStep.style.display = 'block';
-        currentStep--;
+       
         break;
+    }
+
+    currentStep--; // Decrement current step
+
+
+    // Reset the slidingMenu content if returning to the first step
+    if (currentStep === 1) {
+      slidingMenu.innerHTML = `
+      <ion-icon name="chevron-up-outline" size="large"></ion-icon>
+      <strong style="font-size: 2rem; margin-left: 5px;">45€</strong>
+      <div class="triggers" style="display: none;">
+        <button id="globalTriggerUp" title="Only slides up the target element" style="display: none;">slideUp</button>
+        <button id="globalTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
+        <button id="globalTriggerToggle" title="Toggle slide-up and slide-down states for the target">slideToggle</button>
+      </div>
+      <span class="btn btn-warning next" id="nextButton"><strong>PASUL URMATOR</strong></span>
+    `;
     }
   }
 
+  // Add event listeners to back buttons in each step
   document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
   document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
   document.getElementById('backButtonInFourthStep').addEventListener('click', goBack);
+
 </script>
+
 
 
 </html>
