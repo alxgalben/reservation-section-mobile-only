@@ -399,55 +399,56 @@
                     <ul class="list-group" style="height: 100%; width: 100%; text-align: left;">
 
                       <div class="form-check form-switch" style="margin-top: .5rem;">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">protectie EXTRA Cover <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck1">
+                          <label class="form-check-label" for="flexSwitchCheck1">protectie EXTRA Cover <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">protectie SUPER Cover & GARANTIE REDUSA <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck2">
+                          <label class="form-check-label" for="flexSwitchCheck2">protectie SUPER Cover & GARANTIE REDUSA <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">protectie FULL Cover & GARANTIE ZERO <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck3">
+                          <label class="form-check-label" for="flexSwitchCheck3">protectie FULL Cover & GARANTIE ZERO <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">sistem de navigatie (GPS) <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck4">
+                          <label class="form-check-label" for="flexSwitchCheck4">sistem de navigatie (GPS) <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">scaun copil <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck5">
+                          <label class="form-check-label" for="flexSwitchCheck5">scaun copil <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">sofer tanar (19-21) <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck6">
+                          <label class="form-check-label" for="flexSwitchCheck6">sofer tanar (19-21) <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">sofer suplimentar <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck7">
+                          <label class="form-check-label" for="flexSwitchCheck7">sofer suplimentar <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">inchiriere cu sofer <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck8">
+                          <label class="form-check-label" for="flexSwitchCheck8">inchiriere cu sofer <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">calatorie in strainatate (UE) <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck9">
+                          <label class="form-check-label" for="flexSwitchCheck9">calatorie in strainatate (UE) <strong>52€</strong></label>
                       </div>
                       <hr/>
                       <div class="form-check form-switch" style="margin-bottom: .5rem;">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">calatorie in Republica Moldova <strong>52€</strong></label>
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck10">
+                          <label class="form-check-label" for="flexSwitchCheck10">calatorie in Republica Moldova <strong>52€</strong></label>
                       </div>
-                    </ul>
+                  </ul>
+                  
                   </div>
               </div>
         </div>
@@ -1053,7 +1054,7 @@
       break;
     case 3:
       targetThirdStep.style.display = 'none';
-      targetFourthStep.style.display = 'block';
+      slidingMenu.style.display = 'block';
       break;
   }
 
@@ -1065,15 +1066,14 @@
 }
 
 
+
 function resetSlidingMenuContent() {
   const slidingMenu = document.getElementById('slidingMenu');
   slidingMenu.classList.add('sliding-menu-initial');
 
   const nextButton = document.getElementById('nextButton');
-  nextButton.removeEventListener('click', handleNextButtonClick);
   nextButton.addEventListener('click', handleNextButtonClick);
 }
-
 
   let speedAnimation = 400;
   let targetId = document.getElementById("target");
@@ -1096,7 +1096,6 @@ function resetSlidingMenuContent() {
   let slidingMenu = document.getElementById("slidingMenu");
   let targetSecondStep = document.getElementById("targetSecondStep");
   let targetThirdStep = document.getElementById("targetThirdStep");
-  let targetFourthStep = document.getElementById("targetFourthStep");
 
   let lastActiveStep = null;
 
@@ -1120,7 +1119,6 @@ function resetSlidingMenuContent() {
       slideToggle(target, speedAnimation);
       targetSecondStep.style.display = 'none';
       targetThirdStep.style.display = 'none';
-      targetFourthStep.style.display = 'none';
     }
   });
 
@@ -1137,15 +1135,11 @@ function resetSlidingMenuContent() {
         targetSecondStep.style.display = 'none';
         targetThirdStep.style.display = 'block';
         break;
-      case 3:
-        targetThirdStep.style.display = 'none';
-        targetFourthStep.style.display = 'block';
-        break;
     }
 
     currentStep++;
 
-    if (currentStep > 3) {
+    if (currentStep > 2) {
       currentStep = 1;
     }
   });
@@ -1155,45 +1149,28 @@ function resetSlidingMenuContent() {
     event.stopPropagation();
 
     switch (currentStep) {
-      case 2:
-        targetSecondStep.style.display = 'none';
-        slidingMenu.style.display = 'block';
-        break;
-      case 3:
-        targetThirdStep.style.display = 'none';
-        targetSecondStep.style.display = 'block';
-        break;
-      case 4:
-        targetFourthStep.style.display = 'none';
-        targetThirdStep.style.display = 'block';
-       
-        break;
+        case 2:
+            targetSecondStep.style.display = 'none';
+            slidingMenu.style.display = 'block';
+            break;
+        case 3:
+            targetThirdStep.style.display = 'none';
+            targetSecondStep.style.display = 'block';
+            currentStep = 2;
+            break;
     }
 
     currentStep--;
 
     if (currentStep === 1) {
-      resetSlidingMenuContent();
+        resetSlidingMenuContent();
     }
+}
 
-
-    if (currentStep === 1) {
-      slidingMenu.innerHTML = `
-      <ion-icon name="chevron-up-outline" size="large"></ion-icon>
-      <strong style="font-size: 2rem; margin-left: 5px;">45€</strong>
-      <div class="triggers" style="display: none;">
-        <button id="globalTriggerUp" title="Only slides up the target element" style="display: none;">slideUp</button>
-        <button id="globalTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
-        <button id="globalTriggerToggle" title="Toggle slide-up and slide-down states for the target">slideToggle</button>
-      </div>
-      <span class="btn btn-warning next" id="nextButton"><strong>PASUL URMATOR</strong></span>
-    `;
-    }
-  }
 
   document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
   document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
-  document.getElementById('backButtonInFourthStep').addEventListener('click', goBack);
 
 </script>
+
 </html>
