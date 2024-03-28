@@ -872,6 +872,23 @@
       z-index: 5000;
     }
 
+    .sliding-menu-initial {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 5rem !important;
+  background-color: #f8f9fa !important;
+  padding: 15px !important;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2) !important;
+  z-index: 5000 !important;
+}
+
+
+
     #slidingMenu:hover{
       cursor: pointer;
     }
@@ -1046,6 +1063,39 @@
     return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
   };
 
+  function handleNextButtonClick() {
+  switch (currentStep) {
+    case 1:
+      target.style.display = 'none';
+      targetSecondStep.style.display = 'block';
+      break;
+    case 2:
+      targetSecondStep.style.display = 'none';
+      targetThirdStep.style.display = 'block';
+      break;
+    case 3:
+      targetThirdStep.style.display = 'none';
+      targetFourthStep.style.display = 'block';
+      break;
+  }
+
+  currentStep++;
+
+  if (currentStep > 3) {
+    currentStep = 1;
+  }
+}
+
+
+function resetSlidingMenuContent() {
+  const slidingMenu = document.getElementById('slidingMenu');
+  slidingMenu.classList.add('sliding-menu-initial');
+
+  const nextButton = document.getElementById('nextButton');
+  nextButton.removeEventListener('click', handleNextButtonClick);
+  nextButton.addEventListener('click', handleNextButtonClick);
+}
+
 
   let speedAnimation = 400;
   let targetId = document.getElementById("target");
@@ -1122,16 +1172,14 @@
     }
   });
 
-  // Function to handle going back to the previous step
   function goBack(event) {
-    event.preventDefault(); // Prevent the default behavior of the anchor tag
-    event.stopPropagation(); // Stop event propagation to prevent off-canvas from closing
+    event.preventDefault();
+    event.stopPropagation();
 
-    // Decrement the current step and navigate accordingly
     switch (currentStep) {
       case 2:
         targetSecondStep.style.display = 'none';
-        slidingMenu.style.display = 'block'; // Show the off-canvas content
+        slidingMenu.style.display = 'block';
         break;
       case 3:
         targetThirdStep.style.display = 'none';
@@ -1144,10 +1192,13 @@
         break;
     }
 
-    currentStep--; // Decrement current step
+    currentStep--;
+
+    if (currentStep === 1) {
+      resetSlidingMenuContent();
+    }
 
 
-    // Reset the slidingMenu content if returning to the first step
     if (currentStep === 1) {
       slidingMenu.innerHTML = `
       <ion-icon name="chevron-up-outline" size="large"></ion-icon>
@@ -1162,7 +1213,6 @@
     }
   }
 
-  // Add event listeners to back buttons in each step
   document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
   document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
   document.getElementById('backButtonInFourthStep').addEventListener('click', goBack);
