@@ -515,9 +515,10 @@
                       <div class="col">
                         <label for="phone">Phone</label>
                         <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
-                          v-model="formData.phone" :class="{ 'is-invalid': !validatePhoneNumber() }">
+                               v-model="formData.phone" :class="{ 'is-invalid': !validatePhoneNumber() }"
+                               autocomplete="tel">
                         <div class="invalid-feedback">Please enter a valid phone number.</div>
-                      </div>
+                    </div>                    
                       <div class="col">
                         <label for="dob">Date of Birth</label>
                         <input type="date" class="form-control" id="dob">
@@ -1042,28 +1043,37 @@
     return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
   };
 
+  function finalizeProcess() {
+    window.location.href = 'www.google.com';
+  }
+
   function handleNextButtonClick() {
-  switch (currentStep) {
-    case 1:
-      target.style.display = 'none';
-      targetSecondStep.style.display = 'block';
-      break;
-    case 2:
-      targetSecondStep.style.display = 'none';
-      targetThirdStep.style.display = 'block';
-      break;
-    case 3:
-      targetThirdStep.style.display = 'none';
-      slidingMenu.style.display = 'block';
-      break;
-  }
+    switch (currentStep) {
+      case 1:
+        slideUp(target, speedAnimation);
+        targetSecondStep.style.display = 'block';
+        break;
+      case 2:
+        slideUp(targetSecondStep, speedAnimation);
+        targetThirdStep.style.display = 'block';
+        break;
+      case 3:
+        slideUp(targetThirdStep, speedAnimation);
+        slideUp(target, speedAnimation);
+        slideUp(targetSecondStep, speedAnimation);
 
-  currentStep++;
+        nextButton.innerText = 'FINALIZEAZA';
+        nextButton.removeEventListener('click', handleNextButtonClick);
+        nextButton.addEventListener('click', finalizeProcess);
+        break;
+    }
 
-  if (currentStep > 3) {
-    currentStep = 1;
+    currentStep++;
+
+    if (currentStep > 3) {
+      currentStep = 1;
+    }
   }
-}
 
 
 
