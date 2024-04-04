@@ -1167,7 +1167,14 @@ function resetSlidingMenuContent() {
         targetSecondStep.style.display = 'block';
         currentStep = 2;
     }
+
+    resetSlidingMenuStyles();
 }
+
+function resetSlidingMenuStyles() {
+    slidingMenu.classList.add('sliding-menu-initial'); // Adaugă clasa pentru stilurile inițiale
+}
+
 
 document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
 document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
