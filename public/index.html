@@ -942,8 +942,7 @@
 
 </style>
 
-<script>
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+<script>const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
   const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
   document.getElementById('accordionButton').addEventListener('click', function () {
@@ -1043,37 +1042,32 @@
     return window.getComputedStyle(target).display === 'none' ? slideDown(target, duration) : slideUp(target, duration);
   };
 
-  function finalizeProcess() {
-    window.location.href = 'www.google.com';
-  }
-
   function handleNextButtonClick() {
+    if (target.style.display === 'block') {
+        if (targetSecondStep.style.display === 'block') {
+            currentStep = 2;
+        } else if (targetThirdStep.style.display === 'block') {
+            currentStep = 3;
+        } else {
+            currentStep = 1;
+        }
+    }
+
     switch (currentStep) {
-      case 1:
-        slideUp(target, speedAnimation);
-        targetSecondStep.style.display = 'block';
-        break;
-      case 2:
-        slideUp(targetSecondStep, speedAnimation);
-        targetThirdStep.style.display = 'block';
-        break;
-      case 3:
-        slideUp(targetThirdStep, speedAnimation);
-        slideUp(target, speedAnimation);
-        slideUp(targetSecondStep, speedAnimation);
-
-        nextButton.innerText = 'FINALIZEAZA';
-        nextButton.removeEventListener('click', handleNextButtonClick);
-        nextButton.addEventListener('click', finalizeProcess);
-        break;
+        case 1:
+            target.style.display = 'none';
+            targetSecondStep.style.display = 'block';
+            break;
+        case 2:
+            targetSecondStep.style.display = 'none';
+            targetThirdStep.style.display = 'block';
+            break;
+        case 3:
+            targetThirdStep.style.display = 'none';
+            slidingMenu.style.display = 'block';
+            break;
     }
-
-    currentStep++;
-
-    if (currentStep > 3) {
-      currentStep = 1;
-    }
-  }
+}
 
 
 
@@ -1136,18 +1130,22 @@ function resetSlidingMenuContent() {
   let currentStep = 1;
 
   nextButton.addEventListener('click', () => {
+
+   
     switch (currentStep) {
       case 1:
         target.style.display = 'none';
         targetSecondStep.style.display = 'block';
+        currentStep = 2;
         break;
       case 2:
         targetSecondStep.style.display = 'none';
         targetThirdStep.style.display = 'block';
+        currentStep = 3;
         break;
     }
 
-    currentStep++;
+   // currentStep++;
 
     if (currentStep > 2) {
       currentStep = 1;
@@ -1158,28 +1156,21 @@ function resetSlidingMenuContent() {
     event.preventDefault();
     event.stopPropagation();
 
-    switch (currentStep) {
-        case 2:
-            targetSecondStep.style.display = 'none';
-            slidingMenu.style.display = 'block';
-            break;
-        case 3:
-            targetThirdStep.style.display = 'none';
-            targetSecondStep.style.display = 'block';
-            currentStep = 2;
-            break;
+    if (targetSecondStep.style.display === 'block') {
+        targetSecondStep.style.display = 'none';
+        slidingMenu.style.display = 'block';
+        currentStep = 1;
     }
 
-    currentStep--;
-
-    if (currentStep === 1) {
-        resetSlidingMenuContent();
+    if (targetThirdStep.style.display === 'block') {
+        targetThirdStep.style.display = 'none';
+        targetSecondStep.style.display = 'block';
+        currentStep = 2;
     }
 }
 
-
-  document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
-  document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
+document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
+document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
 
 </script>
 
