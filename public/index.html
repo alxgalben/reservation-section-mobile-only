@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <title>Reservation Page</title>
-
 </head>
 <div class="all" style="height: 100vh;">
+  
   <div class="car-preview-card card" style="width: 22.65rem; height: 39rem;">
     <div class="card-body">
       <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative; margin-bottom: 0 !important;">
@@ -38,7 +38,6 @@
             style="width: 100%; height: 100%; object-fit: cover;">
           <img src="https://rentacar.travis.ro/media/toyota_rav4_2022_1jpg.jpg" alt="Random Car Image 2"
             style="width: 100%; height: 100%; object-fit: cover;">
-          <!-- Add more images as needed -->
         </div>
         <div class="indicators">
           <div class="indicator active"
@@ -47,10 +46,9 @@
           <div class="indicator"
             onclick="document.querySelector('.slider').style.transform = 'translateX(-100%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 1); })">
           </div>
-          <!-- Add more indicators as needed based on the number of images -->
         </div>
       </div>
-      <p class="lead" style="font-size: .8rem; display: flex; align-items: center; margin-bottom: 1rem !important;"><ion-icon name="information-circle-outline"></ion-icon>Imagini cu titul informativ.</p class="lead">
+      <p class="lead" style="font-size: .8rem; display: flex; align-items: center; margin-bottom: 1rem !important;"><ion-icon name="information-circle-outline"></ion-icon>Imagini cu titu informativ.</p class="lead">
 
       <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
         <div>
@@ -59,9 +57,9 @@
         </div>
         <div style="text-align: right;">
           <h6 class="card-title"
-            style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">from</h6>
-          <h5 class="card-subtitle" style="font-size: 18px !important; margin-bottom: 0;"><span
-              style="font-weight: bold; font-size: 1.5rem;">5230 € </span></h5>
+            style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">from <span class="card-subtitle" style="font-size: 15px;"><s>5890 €</s></span></h6>
+          <h5 class="card-subtitle" style="font-size: 18px !important; margin-bottom: 0;">
+            <span style="font-weight: bold; font-size: 1.5rem;">5230 € </span></h5>
           <h6 class="card-title"
             style="font-size: 14px !important; margin-bottom: 0 !important; color: rgba(33, 37, 41, 0.75);">for 365 days
           </h6>
@@ -128,284 +126,283 @@
     aria-labelledby="offcanvasBottomLabel" style="overflow-y: auto; padding-bottom: 5rem;">
     <div class="offcanvas-body small">
 
-      <div class="row mx-auto" style="width: 85%; text-align: center; border-radius: 24px !important;">
-
-        <div
-          style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
-          <div class="align-horizontal">
-            <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
-              <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
-            </a>
-            <ul class="list-unstyled"
-              style="margin-bottom: 0px; list-style-type: none; padding: 0px; text-align: left; width: 100%;">
-              <li>
-                <p class="lead" style="font-size: 1rem;">
-                  Preluare din <strong>Iasi</strong> pe <strong>20/01/2024</strong> la <strong>14:30</strong>
-                </p>
-              </li>
-              <li>
-                <p class="lead" style="font-size: 1rem;">
-                  Predare in <strong>Timisoara</strong> pe <strong>23/01/2024</strong> la <strong>10:00</strong>
-                </p>
-              </li>
-            </ul>
+      <div class="row g-4 mx-auto justify-content-center">
+        
+        <div class="modal-window" id="modalSelectPlan" style="z-index: 5001; margin-top: 0 !important;">
+          <div>
+            <a href="#" title="Close" class="modal-close" id="closeButtonSelectPlan" style="font-size: 12px;">Close</a>
+            <h1>Atentie!</h1>
+            <h6>Trebuie sa selectezi un plan pentru a putea continua.</h6>
+            <div class="button-container" style="margin-top: 1rem;">
+              <button type="button" class="btn btn-success" id="okSelectPlan">OK</button>
+            </div>
           </div>
         </div>
 
-        <div class="card mb-3" style="width: 100%; border-radius: 24px !important; text-align: left;">
-          <div class="card-body">
-            <h5 class="card-title">Volkswagen Touareg (4x4 Automat) Diesel</h5>
-            <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
-            <hr />
-
-            <div class="tags">
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="calendar" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">2024</span>
-              </span>
-      
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="person" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">5</span>
-              </span>
-      
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="analytics" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">Automatic</span>
-              </span>
-      
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="log-out" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">4</span>
-              </span>
-      
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="construct" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">Diesel</span>
-              </span>
-
-              <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
-                <ion-icon name="cog-outline" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
-                <span style="font-size: 14px;">1998 cmc 122 CP</span>
-              </span>
+        <div class="progress" style="padding: 0 !important;">
+          <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" style="width: 33%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1/3</div>
+        </div>
+        <div style="padding-bottom: 5rem; padding-left: 15px; padding-right: 15px;">
+          <div
+            style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
+            <div class="align-horizontal">
+              <a href="" class="text-reset" data-bs-dismiss="offcanvas" style="color: black;">
+                <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
+              </a>
+              <ul class="list-unstyled"
+                style="margin-bottom: 0px; list-style-type: none; padding: 0px; text-align: left; width: 100%;">
+                <li>
+                  <p class="lead" style="font-size: 1rem;">
+                    Preluare din <strong>Iasi</strong> pe <strong>20/01/2024</strong> la <strong>14:30</strong>
+                  </p>
+                </li>
+                <li>
+                  <p class="lead" style="font-size: 1rem;">
+                    Predare in <strong>Timisoara</strong> pe <strong>23/01/2024</strong> la <strong>10:00</strong>
+                  </p>
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <hr />
+          <div class="card mb-3" style="width: 100%; border-radius: 24px !important; text-align: left;">
+            <div class="card-body">
+              <div class="image-preview card" style="width: 20rem; height: 20rem; overflow: hidden; position: relative; margin-bottom: 0 !important; margin: auto;">
 
-            <div class="dotari">
-              <p class="lead" style="font-size: 1.1rem;">Scaune fata inclazite</p>
-              <p class="lead" style="font-size: 1.1rem;">Senzori parcare</p>
-              <p class="lead" style="font-size: 1.1rem;">Camera video marsarier</p>
-              <p class="lead" style="font-size: 1.1rem;">Pilot automat adaptiv</p>
-              <p class="lead" style="font-size: 1.1rem;">Climatizare automata</p>
-              <p class="lead" style="font-size: 1.1rem;">Geamuri electrice</p>
-              <p class="lead" style="font-size: 1.1rem;">Asistent unghi mort</p>
-              <p class="lead" style="font-size: 1.1rem;">Apple CarPlay / Android Auto</p>
+                <ul style="list-style: none; padding: 16px; display: flex; justify-content: space-between; z-index: 1000;">
+                  <li>
+                    <img src="coming_soon.jpeg" alt="Coming Soon" class="eticheta">
+                  </li>
+                  <li>
+                    <img src="eco_car.jpeg" alt="Eco Car" class="eticheta">
+                  </li>
+                  <li>
+                    <img src="new_model.jpeg" alt="New Model" class="eticheta">
+                  </li>
+                  <li>
+                    <img src="premium_car.jpeg" alt="Premium Car" class="eticheta">
+                  </li>
+                  <li>
+                    <img src="promo_car.jpeg" alt="Promo Car" class="eticheta">
+                  </li>
+                </ul>
+        
+                <div class="slider"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: fit-content;">
+                  <img src="https://rentacar.travis.ro/media/volkswagen_passat_2019_1jpg.jpg" alt="Random Car Image"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="https://rentacar.travis.ro/media/toyota_rav4_2022_1jpg.jpg" alt="Random Car Image 2"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="indicators">
+                  <div class="indicator active"
+                    onclick="document.querySelector('.slider').style.transform = 'translateX(0%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 0); })">
+                  </div>
+                  <div class="indicator"
+                    onclick="document.querySelector('.slider').style.transform = 'translateX(-100%)'; document.querySelectorAll('.indicator').forEach((indicator, i) => { indicator.classList.toggle('active', i === 1); })">
+                  </div>
+                </div>
+              </div>
+              <div style="background-color: rgba(233, 236, 239, 0.5); padding: 15px; border-radius: 14px; margin-top: 1rem;">
+                <h5 class="card-title">Volkswagen Touareg (4x4 Automat) Diesel</h5>
+                <h6 class="card-subtitle mb-2 text-muted">or similar | Sedan</h6>
+              </div>
               <hr />
-            </div>
 
-            <button type="button" id="show-dotari" onclick="toggleDotari()" class="btn btn-dark"
-              style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">Vezi
-              dotarile</button>
-          </div>
-        </div>
+              <div class="tags">
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="calendar" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">2024</span>
+                </span>
+        
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="person" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">5</span>
+                </span>
+        
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="analytics" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">Automatic</span>
+                </span>
+        
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="log-out" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">4</span>
+                </span>
+        
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="construct" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">Diesel</span>
+                </span>
 
-        <div class="col-sm-6" style="padding: 0 !important;">
-          <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-            <div class="card-header" onclick="toggleFirstPlan()"
-              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
-              <strong class="choose-plan" style="color: white;">STANDARD</strong>
-              <strong class="price" style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
-              <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
-            </div>
+                <span class="tag approved" style="display: inline-flex; align-items: center; margin-bottom: 10px;">
+                  <ion-icon name="cog-outline" style="margin-right: 2px; font-size: .9rem !important;"></ion-icon>
+                  <span style="font-size: 14px;">1998 cmc 122 CP</span>
+                </span>
+              </div>
 
-            <div class="card-body travis-plan first-plan" style="background-color: #e5d3ed !important; color: #58236f;">
-              <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
-                  class="badge text-bg-warning" style="padding: 6px 12px;">
-                  <p class="lead">Cel mai cautat</p>
-                </span></h5>
-              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
-              <ul class="list-group plan-list" style="height: 100%; text-align: left;">
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
-                  inchiriere</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
-                <hr style="margin: .5rem !important;">
-                <div class="row align-items-center" style="margin-bottom: 0px !important;">
-                  <div class="col-auto" style="padding-right: 0px !important;">
-                      <h6 style="font-weight: 100; margin-bottom: 0;">
-                          <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
-                      </h6>
-                  </div>
-                  <div class="col" style="padding: 0 !important;">
-                      <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
-                          data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
-                          data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
-                          > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
-                          > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
-                          <h6 style="font-weight: 100; margin: 0; color: #1d4660;">cauciucuri de iarna</h6>
-                          <span class="red-circle" style="margin-left: 5px;">?</span>
-                      </a>
-                </div>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
-                <hr style="margin: .5rem !important;">
-                <button type="submit" onclick="selectPlan('plan1')" class="btn btn-dark"
-                  style="width: 100%; color: rgb(255, 203, 5); background-color: #58236f; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
-              </ul>
+              <div class="dotari">
+                <hr />
+                <p class="lead" style="font-size: 1.1rem;">Scaune fata inclazite</p>
+                <p class="lead" style="font-size: 1.1rem;">Senzori parcare</p>
+                <p class="lead" style="font-size: 1.1rem;">Camera video marsarier</p>
+                <p class="lead" style="font-size: 1.1rem;">Pilot automat adaptiv</p>
+                <p class="lead" style="font-size: 1.1rem;">Climatizare automata</p>
+                <p class="lead" style="font-size: 1.1rem;">Geamuri electrice</p>
+                <p class="lead" style="font-size: 1.1rem;">Asistent unghi mort</p>
+                <p class="lead" style="font-size: 1.1rem;">Apple CarPlay / Android Auto</p>
+                <hr />
+              </div>
+
+              <button type="button" id="show-dotari" onclick="toggleDotari()" class="btn btn-dark"
+                  style="width: 100%; color: #fff; border-radius: 16px; font-weight: bold; margin-top: .5rem;">
+                  Vezi dotarile
+              </button>
             </div>
           </div>
 
-        </div>
+          <div class="col-sm-6" style="padding: 0 !important;">
+            <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+              <div class="card-header" onclick="toggleFirstPlan()"
+                style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
+                <strong class="choose-plan" style="color: white;">STANDARD</strong>
+                <strong class="price" style="color: white; font-size: 25px; margin-left: auto;"><s style="color: white; font-size: 15px; margin-left: auto; font-weight: lighter;">220 €</s> 188 €</strong>
+                <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
+              </div>
 
-        <div class="col-sm-6" style="padding: 0 !important;">
-          <div class="card mb-3"  id="plan2" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-            <div class="card-header" onclick="toggleSecondPlan()"
-              style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
-              <strong class="choose-plan" style="color: white;">PLUS</strong>
-              <strong class="price" style="color: white; font-size: 25px; margin-left: auto;">25€ / zi</strong>
-              <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
-            </div>
-            <div class="card-body travis-plan second-plan" style="background-color: #9dc8e3 !important; color: #1d4660;">
-              <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 400€</h6>
-              <ul class="list-group plan-list" style="height: 100%; text-align: left;">
-                <hr style="margin: .5rem !important;">
-                <div class="row align-items-center" style="margin-bottom: 0px !important;">
-                  <div class="col-auto" style="padding-right: 0px !important;">
-                      <h6 style="font-weight: 100; margin-bottom: 0;">
-                          <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
-                      </h6>
+              <div class="card-body travis-plan first-plan" style="background-color: #e5d3ed !important; color: #58236f;">
+                <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
+                    class="badge text-bg-warning" style="padding: 6px 12px;">
+                    <p class="lead">Cel mai cautat</p>
+                  </span></h5>
+                <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
+                <ul class="list-group plan-list" style="height: 100%; text-align: left;">
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                    inchiriere</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
+                  <hr style="margin: .5rem !important;">
+                  <div class="row align-items-center" style="margin-bottom: 0px !important;">
+                    <div class="col-auto" style="padding-right: 0px !important;">
+                        <h6 style="font-weight: 100; margin-bottom: 0;">
+                            <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
+                        </h6>
+                    </div>
+                    <div class="col" style="padding: 0 !important;">
+                        <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                            data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                            data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                            > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                            > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                            <h6 style="font-weight: 100; margin: 0; color: #1d4660;">cauciucuri de iarna</h6>
+                            <span class="red-circle" style="margin-left: 5px;">?</span>
+                        </a>
                   </div>
-                  <div class="col" style="padding: 0 !important;">
-                      <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
-                          data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
-                          data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
-                          > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
-                          > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
-                          <h6 style="font-weight: 100; margin: 0; color: #1d4660;">Protectie 3 zi(le) inchiriere in Romania</h6>
-                          <span class="red-circle" style="margin-left: 5px;">?</span>
-                      </a>
-                </div>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
+                  <hr style="margin: .5rem !important;">
+                  <button type="submit" onclick="selectPlan('plan1')" onclick="showModalUpgradePlan()" onclick="closeModalUpgradePlan()" class="btn btn-dark"
+                    style="width: 100%; color: rgb(255, 203, 5); background-color: #58236f; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
+                </ul>
+              </div>
             </div>
-              
-              
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
-                  inchiriere</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>cauciucuri de iarna</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
-                <hr style="margin: .5rem !important;">
-                <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
-                <hr style="margin: .5rem !important;">
-                <div class="row align-items-center" style="margin-bottom: 0px !important;">
-                  <div class="col-auto" style="padding-right: 0px !important;">
-                      <h6 style="font-weight: 100; margin-bottom: 0;">
-                          <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
-                      </h6>
+
+          </div>
+
+          <div class="col-sm-6" style="padding: 0 !important;">
+            <div class="card mb-3"  id="plan2" style="position: relative; overflow: hidden; border-radius: 24px !important;">
+              <div class="card-header" onclick="toggleSecondPlan()"
+                style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-standard.png');">
+                <strong class="choose-plan" style="color: white;">PLUS</strong>
+                <strong class="price" style="color: white; font-size: 25px; margin-left: auto;"><s style="color: white; font-size: 15px; margin-left: auto; font-weight: lighter;">298 €</s> 236 €</strong>
+                <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
+              </div>
+              <div class="card-body travis-plan second-plan" style="background-color: #9dc8e3 !important; color: #1d4660;">
+                <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 400€</h6>
+                <ul class="list-group plan-list" style="height: 100%; text-align: left;">
+                  <hr style="margin: .5rem !important;">
+                  <div class="row align-items-center" style="margin-bottom: 0px !important;">
+                    <div class="col-auto" style="padding-right: 0px !important;">
+                        <h6 style="font-weight: 100; margin-bottom: 0;">
+                            <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
+                        </h6>
+                    </div>
+                    <div class="col" style="padding: 0 !important;">
+                        <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                            data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                            data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                            > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                            > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                            <h6 style="font-weight: 100; margin: 0; color: #1d4660;">Protectie 3 zi(le) inchiriere in Romania</h6>
+                            <span class="red-circle" style="margin-left: 5px;">?</span>
+                        </a>
                   </div>
-                  <div class="col" style="padding: 0 !important;">
-                      <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
-                          data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
-                          data-bs-content="Permite rezervarea gratuita si blocarea unei masini la tariful ofertat, pentru max. 72 ore. La expirarea termenului de plata, rezervarea se poate anula automat.">
-                          <h6 style="font-weight: 100; margin: 0; color: #1d4660;">Timp
-                            suplimentar gratuit (max. 2 ore)</h6>
-                          <span class="red-circle" style="margin-left: 5px;">?</span>
-                      </a>
-                </div>
-                <hr style="margin: .5rem !important;">
-                <button type="submit" onclick="selectPlan('plan2')" class="btn btn-dark"
-                  style="width: 100%; color: rgb(255, 203, 5); background-color: #1d4660; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
-              </ul>
+              </div>
+                
+                
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                    inchiriere</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>cauciucuri de iarna</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
+                  <hr style="margin: .5rem !important;">
+                  <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
+                  <hr style="margin: .5rem !important;">
+                  <div class="row align-items-center" style="margin-bottom: 0px !important;">
+                    <div class="col-auto" style="padding-right: 0px !important;">
+                        <h6 style="font-weight: 100; margin-bottom: 0;">
+                            <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
+                        </h6>
+                    </div>
+                    <div class="col" style="padding: 0 !important;">
+                        <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                            data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                            data-bs-content="Permite rezervarea gratuita si blocarea unei masini la tariful ofertat, pentru max. 72 ore. La expirarea termenului de plata, rezervarea se poate anula automat.">
+                            <h6 style="font-weight: 100; margin: 0; color: #1d4660;">Timp
+                              suplimentar gratuit (max. 2 ore)</h6>
+                            <span class="red-circle" style="margin-left: 5px;">?</span>
+                        </a>
+                  </div>
+                  <hr style="margin: .5rem !important;">
+                  <button type="submit" onclick="selectPlan('plan2')" class="btn btn-dark"
+                    style="width: 100%; color: rgb(255, 203, 5); background-color: #1d4660; border-radius: 16px; font-weight: bold; margin-top: .5rem;">SELECTEAZA</button>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="target" style="padding-bottom: 5rem;">
         
-            <div class="col-md-4" style="max-height: 850px; padding-top: 5rem; margin-bottom: 23rem;">
+            <div class="col-md-4" style="max-height: 850px; padding-top: 1rem; margin-bottom: 23rem;">
             <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
               <div class="card-header bg-light bg-gradient"
                 style="text-align: center; font-weight: bold; font-size: 30px;" >Detaliile rezervarii</div>
                 <div class="card-body bg-light bg-gradient" style="overflow-y: auto; text-align: left;">
                   <div class="col-sm-6" style="padding: 0 !important;">
-                    <div class="card mb-3"  id="plan1" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-                      <div class="card-header" onclick="toggleFirstPlan()"
-                        style="display: flex; align-items: center; text-transform: uppercase; font-size: 30px; position: relative; background-size: cover; background-position: center; background-image: url('gradient-plus.png');">
-                        <strong class="choose-plan" style="color: white;">STANDARD</strong>
-                        <strong class="price" style="color: white; font-size: 25px; margin-left: auto;">19€ / zi</strong>
-                        <ion-icon name="chevron-down-outline" style="color: #fff; margin-left: .5rem;"></ion-icon>
-                      </div>
-          
-                      <div class="card-body travis-plan first-plan" style="background-color: #e5d3ed !important; color: #58236f;">
-                        <h5 class="card-title" style="text-transform: uppercase; text-align: center; margin-bottom: 0px;"><span
-                            class="badge text-bg-warning" style="padding: 6px 12px;">
-                            <p class="lead">Cel mai cautat</p>
-                          </span></h5>
-                        <h6 class="card-subtitle mb-2 text-muted" style="margin-top: .5rem;">*Garantie / Fransiza : 500€</h6>
-                        <ul class="list-group plan-list" style="height: 100%; text-align: left;">
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>3 zi(le) inchiriere in Romania</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>675 km (+0.3 €/ km suplimentar)</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
-                            inchiriere</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>asistenta telefonica in caz de urgenta 24/7</h6>
-                          <hr style="margin: .5rem !important;">
-                          <div class="row align-items-center" style="margin-bottom: 0px !important;">
-                            <div class="col-auto" style="padding-right: 0px !important;">
-                                <h6 style="font-weight: 100; margin-bottom: 0;">
-                                    <ion-icon name="checkmark-circle-outline" class="check-icon" style="height: 21px; width: 21px;"></ion-icon>
-                                </h6>
-                            </div>
-                            <div class="col" style="padding: 0 !important;">
-                                <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
-                                    data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
-                                    data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
-                                    > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
-                                    > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
-                                    <h6 style="font-weight: 100; margin: 0; color: #1d4660;">cauciucuri de iarna</h6>
-                                    <span class="red-circle" style="margin-left: 5px;">?</span>
-                                </a>
-                          </div>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa de drum (rovinieta)</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>modificare gratuita a rezervarii</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>TVA 19%</h6>
-                          <hr style="margin: .5rem !important;">
-                          <h6 style="font-weight: 100; margin-bottom: 0 !;"><ion-icon name="checkmark-circle-outline" style="height: 21px; width: 21px; margin-right: 5px;"></ion-icon>taxa spalare auto</h6>
-                          <hr style="margin: .5rem !important;">
-                        </ul>
-                      </div>
-                    </div>
           
                   </div>
                   <dl class="row">         
@@ -426,9 +423,34 @@
         
                     <dt class="col-sm-3">Garantie/fransiza</dt>
                     <dd class="col-sm-9">520€</dd>
-                  </dl>
-        
-                  <p>Tarifele afisate sunt valabile pentru intreaga perioada de inchiriere.</p>
+
+                    <dt class="col-sm-3">Plan selectat</dt>
+                    <dd class="col-sm-9">STANDARD</dd>
+
+                    <dt class="col-sm-3">Acest pachet include:</dt>
+                    <dl>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">3 zi(le) inchiriere in Romania</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">675 km (+0.3 €/ km suplimentar)</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">protectie STANDARD Cover (cu fransiza / responsabilitate partiala)</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">tarif rambursabil in cazul anularii rezervarii pana la 7 zile inainte de
+                        inchiriere</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">asistenta telefonica in caz de urgenta 24/7</dd>
+                    </dl>
+
+                    <dt class="col-sm-3">Acest pachet nu include:</dt>
+                    <dl>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">combustibil</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">taxe vamale</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">amenzi</dd>
+                    </dl>
+
+                    <dt class="col-sm-3">Servicii optionale selectate</dt>
+                    <dl>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">protectie FULL Cover & GARANTIE ZERO</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">sofer tanar (19-21)</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">protectie EXTRA Cover</dd>
+                      <dd class="col-sm-9" style="padding-left: 2px !important;">calatorie in Republica Moldova</dd>
+                    </dl>
         
                   <!-- <div class="alert alert-warning" role="alert" style="margin-top: 1rem;">
                     <h2>Tarif total: 129€</h2>
@@ -443,72 +465,236 @@
         
         <div id="targetSecondStep" style="overflow-y: auto; padding-bottom: 5rem;">
           
-          <div class="row g-4 mx-auto justify-content-center" style="width: 90%; margin-top: 20px; margin-bottom: 25px;">
-
+          <div class="modal-window" id="modal" style="z-index: 5001;">
+            <div>
+              <a href="#" title="Close" class="modal-close" id="close" style="font-size: 12px;">Close</a>
+              <h1>Atentie!</h1>
+              <h6>Nu ai selectat niciun serviciu suplimentar. Esti sigur ca doresti sa continui fara optiuni?</h6>
+              <div class="button-container" style="margin-top: 1rem;">
+                <button type="button" class="btn btn-danger" id="yes">Da</button>
+                <button type="button" class="btn btn-success" id="no">Nu</button>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="row g-4 mx-auto justify-content-center" style="width: 100%; margin-bottom: 25px; margin-left: 0px !important; margin-right: 0px !important;">
+            <div class="progress" style="padding: 0 !important;">
+              <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" style="width: 66%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">2/3</div>
+            </div>
             <div
               style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
               <div class="align-horizontal">
                 <a href="" class="text-reset" id="backButtonInSecondStep" style="color: black;">
                   <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
                 </a>
+                <div style="text-align: center; font-weight: bold; font-size: 30px;">Servicii & Tarife</div>
               </div>
             </div>
+            
 
             <div class="col-md-4" style="max-height: 900px; margin-top: 0px;">
               <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-                  <div class="card-header bg-light bg-gradient" style="text-align: center; font-weight: bold; font-size: 30px;">Servicii & Tarife</div>
                   <div class="card-body bg-light bg-gradient d-flex flex-column align-items-center justify-content-center" style="text-align: center; overflow-y: auto;">
                     <ul class="list-group" style="height: 100%; width: 100%; text-align: left;">
 
-                      <div class="form-check form-switch" style="margin-top: .5rem;">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck1">
-                          <label class="form-check-label" for="flexSwitchCheck1">protectie EXTRA Cover <strong>52€</strong></label>
-                      </div>
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">protectie EXTRA Cover</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+                    
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck2">
-                          <label class="form-check-label" for="flexSwitchCheck2">protectie SUPER Cover & GARANTIE REDUSA <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle1" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle1">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">protectie SUPER Cover & GARANTIE REDUSA</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle1">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck3">
-                          <label class="form-check-label" for="flexSwitchCheck3">protectie FULL Cover & GARANTIE ZERO <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle2" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle2">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">protectie FULL Cover & GARANTIE ZERO</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle2">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck4">
-                          <label class="form-check-label" for="flexSwitchCheck4">sistem de navigatie (GPS) <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle3" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle3">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">sistem de navigatie (GPS)</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle3">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck5">
-                          <label class="form-check-label" for="flexSwitchCheck5">scaun copil <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle4" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle4">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">scaun copil</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle4">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck6">
-                          <label class="form-check-label" for="flexSwitchCheck6">sofer tanar (19-21) <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle5" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle5">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">sofer tanar (19-21)</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle5">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck7">
-                          <label class="form-check-label" for="flexSwitchCheck7">sofer suplimentar <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle6" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle6">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">sofer suplimentar</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle6">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck8">
-                          <label class="form-check-label" for="flexSwitchCheck8">inchiriere cu sofer <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle7" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle7">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">inchiriere cu sofer</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle7">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck9">
-                          <label class="form-check-label" for="flexSwitchCheck9">calatorie in strainatate (UE) <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle8" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle8">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">calatorie in strainatate (UE)</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle8">52€</label>
+                                <span class="red-circle" style="margin-left: 10px !important; margin-bottom: 5px !important;">?</span>
+                            </a>
+                        </div>
+                    </div>
+
                       <hr/>
-                      <div class="form-check form-switch" style="margin-bottom: .5rem;">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheck10">
-                          <label class="form-check-label" for="flexSwitchCheck10">calatorie in Republica Moldova <strong>52€</strong></label>
-                      </div>
+
+                      <div class="form-check form-switch" style="margin-top: .5rem; display: flex; align-items: center; justify-content: flex-start; padding-left: 0px;">
+                        <label class="toggle" for="myToggle9" style="margin-bottom: 0px; margin-right: 10px !important;">
+                            <input class="toggle__input" name="" type="checkbox" id="myToggle9">
+                            <div class="toggle__fill"></div>
+                        </label>
+                        <div style="display: flex; align-items: center;">
+                            <a tabindex="0" class="popover-dismiss question" role="button" style="text-decoration: none; display: flex; align-items: center; margin: 0px;"
+                                data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus"
+                                data-bs-content="Rezervarea poate fi anulata gratuit cu pana la 7 zile inainte de momentul inchirierii, iar avansul platit se ramburseaza integral. In cazul anularii rezervarii cu mai putin de 7 zile inainte de momentul inchirierii, din avansul platit se va retine o taxa de anulare, astfel:
+                                > 50 EUR pentru rezervari cu valoarea tarifului de inchiriere auto (fara serviciile optionale) de pana la 500 EUR;
+                                > 100 EUR pentru rezervari cu valoare tarifului de inchiriere auto (fara serviciile optionale) de peste 500 EUR;">
+                                <h6 style="font-weight: 100; color: black;">calatorie in Republica Moldova</h6>
+                                <label class="form-check-label" style="margin-left: 0.5rem; font-weight: bold; margin-bottom: 5px !important; color: black;" for="myToggle9">52€</label>
+                                <span class="red-circle">?</span>
+                            </a>
+                        </div>
+                    </div>
                   </ul>
                   
                   </div>
@@ -525,120 +711,151 @@
         </div>
 
         <div id="targetThirdStep" style="overflow-y: auto; padding-bottom: 5rem;">
-          
-          <div class="row g-4 mx-auto justify-content-center" style="width: 90%; margin-top: 20px; margin-bottom: 25px;">
 
+          <div class="modal-window" id="modalUpgradePlan" style="z-index: 5001; display: none;">
+            <div>
+              <a href="#" title="Close" class="modal-close" id="closeButtonUpgradePlan" style="font-size: 12px;">Close</a>
+              <h1>Atentie!</h1>
+              <h6>Ai selectat planul STANDARD. Doresti sa treci la planul PLUS pentru doar 5 euro in plus?</h6>
+              <div class="button-container" style="margin-top: 1rem;">
+                <button type="button" class="btn btn-danger" id="noUpgrade">Nu</button>
+                <button type="button" class="btn btn-success" id="yeUpgrade">Da</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row g-4 mx-auto justify-content-center" style="width: 100%; margin-bottom: 25px; margin-left: 0px !important; margin-right: 0px !important;">
+            <div class="progress" style="padding: 0 !important;">
+              <div class="progress-bar bg-warning" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">3/3</div>
+            </div>
             <div
               style="padding: 0; width: 100%; margin: auto; display: flex; align-items: center; justify-content: flex-start; margin-top: 20px; margin-bottom: 20px;">
               <div class="align-horizontal">
                 <a href="" class="text-reset" id="backButtonInThirdStep" style="color: black;">
                   <ion-icon name="arrow-back-circle-outline" style="margin-right: 5px; font-size: 64px;"></ion-icon>
                 </a>
+                <div style="text-align: center; font-weight: bold; font-size: 30px;">Checkout</div>
               </div>
             </div>
 
             <div class="card-group" style="margin-top: 0px;">
-              <div class="card" style="border-radius: 16px;">
+              <div class="card" style="border-radius: 24px !important;">
                 <div class="card-body">
                   <h5 class="card-title">Personal Data</h5>
                   <div class="form-container">
-          
                     <div class="row">
-                      <div class="col">
-                        <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name"
-                          v-model="formData.firstName" :class="{ 'is-invalid': !validateFirstName() }">
-                        <div class="invalid-feedback">Please enter a valid first name.</div>
-                      </div>
-                      <div class="col">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name"
-                          v-model="formData.lastName" :class="{ 'is-invalid': !validateLastName() }">
-                        <div class="invalid-feedback">Please enter a valid last name.</div>
-                      </div>
+                        <div class="col">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name"
+                                v-model="formData.firstName" :class="{ 'is-invalid': !validateFirstName() }">
+                            <div class="invalid-feedback">Please enter a valid first name.</div>
+                        </div>
                     </div>
-          
+                
                     <div class="row">
-                      <div class="col">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                          placeholder="Enter your email" v-model="formData.email" :class="{ 'is-invalid': !validateEmail() }">
-                        <div class="invalid-feedback">Please enter a valid email address.</div>
-                      </div>
-                      <div class="col">
-                        <label for="inputState">Country</label>
-                        <select class="form-control" id="inputState">
-                          <option selected>Choose...</option>
-                        </select>
-                      </div>
+                        <div class="col">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name"
+                                v-model="formData.lastName" :class="{ 'is-invalid': !validateLastName() }">
+                            <div class="invalid-feedback">Please enter a valid last name.</div>
+                        </div>
                     </div>
-          
+                
                     <div class="row">
-                      <div class="col">
-                        <label for="phone">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
-                               v-model="formData.phone" :class="{ 'is-invalid': !validatePhoneNumber() }"
-                               autocomplete="tel">
-                        <div class="invalid-feedback">Please enter a valid phone number.</div>
-                    </div>                    
-                      <div class="col">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob">
-                      </div>
+                        <div class="col">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter your email" v-model="formData.email" :class="{ 'is-invalid': !validateEmail() }">
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
                     </div>
-          
+                
                     <div class="row">
-                      <div class="col">
-                        <label for="flightNumber">Flight Number</label>
-                        <input type="text" class="form-control" id="flightNumber" placeholder="Enter your flight number">
-                      </div>
-                      <div class="col">
-                        <label for="hearAbout">How did you hear about us?</label>
-                        <select class="form-control" id="hearAbout">
-                          <option value="0"></option>
-                          <option value="1">Internet search (Google)</option>
-                          <option value="2">Google sponsored ad</option>
-                          <option value="3">Social networks</option>
-                          <option value="4">Facebook ad</option>
-                          <option value="5">By recommendation</option>
-                          <option value="6">Airport office</option>
-                          <option value="7">Direct access to the site</option>
-                          <option value="8">I am a loyal customer</option>
-                          <option value="9">Another source</option>
-                        </select>
-                      </div>
+                        <div class="col">
+                            <label for="inputState">Country</label>
+                            <select class="form-control" id="inputState">
+                                <option selected>Choose...</option>
+                            </select>
+                        </div>
                     </div>
-          
-                    <div class="mb-3">
-                      <label for="specialRequestInput" class="form-label">Special Request</label>
-                      <textarea class="form-control" id="specialRequestInput" rows="3"
-                        placeholder="Enter your special request"></textarea>
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                v-model="formData.phone" :class="{ 'is-invalid': !validatePhoneNumber() }" autocomplete="tel">
+                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                        </div>
                     </div>
-          
-                    <div class="alert alert-warning" role="alert">
-                      Make the full payment now and get a 5% DISCOUNT of the rental rate on the spot! Use the "PAYNOW" coupon to
-                      get the discount.
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob">
+                        </div>
                     </div>
-          
-                    <div class="input-group mb-3">
-                      <input type="text" class="form-control" id="voucher-code-input" placeholder="Do you have a voucher?"
-                        aria-label="Do you have a voucher?" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <button class="btn btn-outline-warning" id="btn-discount" type="button">Apply discount!</button>
-                      </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="flightNumber">Flight Number</label>
+                            <input type="text" class="form-control" id="flightNumber" placeholder="Enter your flight number">
+                        </div>
                     </div>
-                  </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="hearAbout">How did you hear about us?</label>
+                            <select class="form-control" id="hearAbout">
+                                <option value="0"></option>
+                                <option value="1">Internet search (Google)</option>
+                                <option value="2">Google sponsored ad</option>
+                                <option value="3">Social networks</option>
+                                <option value="4">Facebook ad</option>
+                                <option value="5">By recommendation</option>
+                                <option value="6">Airport office</option>
+                                <option value="7">Direct access to the site</option>
+                                <option value="8">I am a loyal customer</option>
+                                <option value="9">Another source</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <label for="specialRequestInput" class="form-label">Special Request</label>
+                            <textarea class="form-control" id="specialRequestInput" rows="3"
+                                placeholder="Enter your special request"></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <div class="alert alert-warning" role="alert">
+                                Make the full payment now and get a 5% DISCOUNT of the rental rate on the spot! Use the "PAYNOW" coupon
+                                to get the discount.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="voucher-code-input" placeholder="Do you have a voucher?"
+                                    aria-label="Do you have a voucher?" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-warning" id="btn-discount" type="button">Apply discount!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 </div>
               </div>
-              <div class="card" style="border-radius: 16px;">
+              <div class="card" style="border-radius: 24px !important;">
                 <div class="card-body">
-                  <h5 class="card-title">Checkout</h5>
-                  <div class="alert alert-warning final-price-warning" role="alert" style="text-align: center;">
-                    <h4>THE FINAL PRICE WILL BE:</h4>
-                  </div>
-                  <div class="big-text" style="margin-top: 50px;">
-                    <h4><span class="strikethrough">144 €</span></h4>
-                    <h1>123 €</h1>
+                  <div class="alert alert-warning final-price-warning" role="alert" style="text-align: center; border-radius: 16px 16px 5px 5px !important;">
+                    <h4>FINAL PRICE: <span style="margin-left: 10px; margin-right: 10px; font-size: 20px !important;"><s>144€</s></span> 286€</h4>
                   </div>
                   <div class="row rowcard" style="margin-bottom: 20px;">
                     <div class="col-sm-4 choose">
@@ -679,9 +896,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                     <label class="form-check-label" for="inlineCheckbox1">
-                      I agree with <a href="https://rentacar.travis.ro/en/car-rental-terms-and-conditions" target="_blank"> booking
-                        terms and conditions </a> and <a href="https://rentacar.travis.ro/en/privacy-policy" target="_blank"> privacy
-                        policy </a>
+                      I agree to the <a href="https://rentacar.travis.ro/en/car-rental-terms-and-conditions" target="_blank"> booking terms and conditions </a> as well as the  <a href="https://rentacar.travis.ro/en/privacy-policy" target="_blank"> privacy
+                        policy </a>. Furthermore, I confirm that I possess a valid identity card and driver's license, each of which is at least one year old.
                     </label>
                   </div>
                   <div class="form-check">
@@ -710,16 +926,20 @@
             </div>
         </div>
         
-        
-        <div id="slidingMenu">
-            <ion-icon name="chevron-up-outline" size="large"></ion-icon>
-            <strong style="font-size: 2rem; margin-left: 5px;">45€</strong>
-            <div class="triggers" style="display: none;">
-              <button id="globalTriggerUp" title="Only slides up the target element" style="display: none;">slideUp</button>
-              <button id="globalTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
-              <button id="globalTriggerToggle" title="Toggle slide-up and slide-down states for the target">slideToggle</button>
+        <div id="slidingMenu" style="text-align: center;">
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center;">
+              <ion-icon name="chevron-up-outline" size="large"></ion-icon>
+              <strong style="font-size: 2rem; margin-left: 5px;">45€</strong>
             </div>
-            <span class="btn btn-warning next" id="nextButton"><strong>PASUL URMATOR</strong></span>
+            <p style="color: black;">Price details</p>
+          </div>
+          <div class="triggers" style="display: none;">
+            <button id="globalTriggerUp" title="Only slides up the target element" style="display: none;">slideUp</button>
+            <button id="globalTriggerDown" title="Only slides down the target element" style="display: none;">slideDown</button>
+            <button id="globalTriggerToggle" title="Toggle slide-up and slide-down states for the target">slideToggle</button>
+          </div>
+          <span class="btn btn-warning next disabled" id="nextButton"><strong>PASUL URMATOR</strong></span>
         </div>
 
       </div>
@@ -765,6 +985,71 @@
 </body>
 
 <style lang="scss">
+
+.rotate-upside-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.38);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999 !important;
+
+  & > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+  }
+  header {
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+  }
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/* Demo Styles */
+
+.modal-window {
+  & > div {
+    border-radius: 1rem;
+  }
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
   ul li {
     margin-bottom: 0px;
   }
@@ -1032,8 +1317,8 @@
     left: 0;
     top: 50%;
     right: 0;
-    border-top: 3px solid;
-    border-color: inherit;
+    border-top: 2px solid;
+    border-color: black;
 
     -webkit-transform: rotate(-20deg);
     -moz-transform: rotate(-20deg);
@@ -1065,17 +1350,93 @@
 
   .red-circle {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #f9c706;
     color: white;
     text-align: center;
-    line-height: 20px;
-    margin-left: 5px;
+    line-height: 15px; /* Adjusted line-height */
+    margin-left: 10px !important;
+    margin-bottom: 5px !important;
+    font-size: 12px;
+}
+
+  .dotari {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+  .dotari.show {
+      display: block;
+      max-height: 1000px;
   }
 
+  .toggle {
+  --width: 50px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
 
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: #dddddd;
+  transition: background 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill {
+  background: #ffc107;
+}
+
+.toggle__fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+  transform: translateX(var(--height));
+}
+
+}
+
+s, strike{text-decoration:none;position:relative;}
+s::before, strike::before {
+    top: 50%; /*tweak this to adjust the vertical position if it's off a bit due to your font family */
+    background:red; /*this is the color of the line*/
+    opacity:.7;
+    content: '';
+    width: 110%;
+    position: absolute;
+    height:.1em;
+    border-radius:.1em;
+    left: -5%;
+    white-space:nowrap;
+    display: block;
+    transform: rotate(-15deg);  
+}
+s.straight::before, strike.straight::before{
+    transform: rotate(0deg);
+    left:-1%;
+    width:102%;
 }
 
 
@@ -1083,17 +1444,13 @@
 </style>
 
 <script>
-
-document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
-
-    // Initialize popover for the specific element
     const specificPopover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-        trigger: 'focus'
+      trigger: 'focus'
     });
-});
-
+  });
 
   document.getElementById('accordionButton').addEventListener('click', function () {
     document.querySelector('[data-bs-toggle="collapse"]').click();
@@ -1114,12 +1471,78 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function selectPlan(planId) {
-    $('#' + planId).toggleClass('selected-plan');
+  let chevronIcon = document.querySelector('#slidingMenu ion-icon');
+
+  chevronIcon.addEventListener('click', function(event) {
+      slideToggle(targetId, speedAnimation);
+      this.classList.toggle('rotate-upside-down');
+      event.stopPropagation();
+  });
+
+
+  let priceElement = document.querySelector('#slidingMenu strong');
+
+  priceElement.addEventListener('click', function(event) {
+      slideToggle(targetId, speedAnimation);
+      chevronIcon.classList.toggle('rotate-upside-down');
+      event.stopPropagation();
+  });
+
+  let priceDetailsLink = document.querySelector('#slidingMenu p');
+
+  priceDetailsLink.addEventListener('click', function(event) {
+      slideToggle(targetId, speedAnimation);
+      chevronIcon.classList.toggle('rotate-upside-down');
+      event.stopPropagation();
+  });
+
+
+
+
+    var modalUpgradePlan = document.getElementById('modalUpgradePlan');
+    var closeButtonUpgradePlan = document.getElementById('closeButtonUpgradePlan');
+
+    var noUpgrade = document.getElementById('noUpgrade');
+    var yesUpgrade = document.getElementById('yesUpgrade');
+
+    function closeModalUpgradePlan() {
+      modalUpgradePlan.style.display = 'none';
+    }
+
+    function showModalUpgradePlan() {
+      modalUpgradePlan.style.display = 'block';
+    }
+
+    closeButtonUpgradePlan.addEventListener('click', closeModalUpgradePlan);
+    noUpgrade.addEventListener('click', closeModalUpgradePlan);
+    // yesUpgrade.addEventListener('click', handleNextButtonClick);
+
+    function enableNextButton() {
+      $('#nextButton').removeClass('disabled');
+    }
+
+    function disableNextButton() {
+      $('#nextButton').addClass('disabled');
+    }
+    
+    function selectPlan(planId) {
+      $('#' + planId).toggleClass('selected-plan');
 
     const otherPlanId = (planId === 'plan1') ? 'plan2' : 'plan1';
     $('#' + otherPlanId).removeClass('selected-plan');
-  }
+
+      if (planId === 'plan1') {
+        showModalUpgradePlan();
+      } else {
+        closeModalUpgradePlan();
+      }
+
+      if(planId === 'plan1' || planId === 'plan2'){
+        enableNextButton();
+      }
+    }
+
+
 
   $(document).ready(function () {
     $('.accordion-button').on('click', function () {
@@ -1193,41 +1616,37 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   function handleNextButtonClick() {
-    if (target.style.display === 'block') {
-        if (targetSecondStep.style.display === 'block') {
-            currentStep = 2;
-        } else if (targetThirdStep.style.display === 'block') {
-            currentStep = 3;
-        } else {
-            currentStep = 1;
-        }
+    if ($('#target').css('display') === 'block') {
+      if ($('#targetSecondStep').css('display') === 'block') {
+        currentStep = 2;
+      } else if ($('#targetThirdStep').css('display') === 'block') {
+        currentStep = 3;
+      } else {
+        currentStep = 1;
+      }
     }
 
     switch (currentStep) {
-        case 1:
-            target.style.display = 'none';
-            targetSecondStep.style.display = 'block';
-            break;
-        case 2:
-            targetSecondStep.style.display = 'none';
-            targetThirdStep.style.display = 'block';
-            break;
-        case 3:
-            targetThirdStep.style.display = 'none';
-            slidingMenu.style.display = 'block';
-            break;
+      case 1:
+        $('#target').css('display', 'none');
+        $('#targetSecondStep').css('display', 'block');
+        break;
+      case 2:
+        $('#targetSecondStep').css('display', 'none');
+        $('#targetThirdStep').css('display', 'block');
+        break;
+      case 3:
+        $('#targetThirdStep').css('display', 'none');
+        $('#slidingMenu').css('display', 'block');
+        break;
     }
-}
+  }
 
+  function resetSlidingMenuContent() {
+    $('#slidingMenu').addClass('sliding-menu-initial');
 
-
-function resetSlidingMenuContent() {
-  const slidingMenu = document.getElementById('slidingMenu');
-  slidingMenu.classList.add('sliding-menu-initial');
-
-  const nextButton = document.getElementById('nextButton');
-  nextButton.addEventListener('click', handleNextButtonClick);
-}
+    $('#nextButton').on('click', handleNextButtonClick);
+  }
 
   let speedAnimation = 400;
   let targetId = document.getElementById("target");
@@ -1255,7 +1674,7 @@ function resetSlidingMenuContent() {
 
   slidingMenu.addEventListener('click', (event) => {
     if (event.target === slidingMenu) {
-      if (target.style.display === 'block') {
+      if ($('#target').css('display') === 'block') {
         slideToggle(target, speedAnimation);
         if (lastActiveStep) {
           lastActiveStep.style.display = 'block';
@@ -1269,7 +1688,7 @@ function resetSlidingMenuContent() {
 
   slidingMenu.querySelector('button').addEventListener('click', (event) => {
     event.stopPropagation();
-    if (target.style.display === 'block') {
+    if ($('#target').css('display') === 'block') {
       slideToggle(target, speedAnimation);
       targetSecondStep.style.display = 'none';
       targetThirdStep.style.display = 'none';
@@ -1280,8 +1699,6 @@ function resetSlidingMenuContent() {
   let currentStep = 1;
 
   nextButton.addEventListener('click', () => {
-
-   
     switch (currentStep) {
       case 1:
         target.style.display = 'none';
@@ -1295,8 +1712,6 @@ function resetSlidingMenuContent() {
         break;
     }
 
-   // currentStep++;
-
     if (currentStep > 2) {
       currentStep = 1;
     }
@@ -1306,28 +1721,87 @@ function resetSlidingMenuContent() {
     event.preventDefault();
     event.stopPropagation();
 
-    if (targetSecondStep.style.display === 'block') {
-        targetSecondStep.style.display = 'none';
-        slidingMenu.style.display = 'block';
-        currentStep = 1;
+    if ($('#targetSecondStep').css('display') === 'block') {
+      targetSecondStep.style.display = 'none';
+      slidingMenu.style.display = 'block';
+      currentStep = 1;
     }
 
-    if (targetThirdStep.style.display === 'block') {
-        targetThirdStep.style.display = 'none';
-        targetSecondStep.style.display = 'block';
-        currentStep = 2;
+    if ($('#targetThirdStep').css('display') === 'block') {
+      targetThirdStep.style.display = 'none';
+      targetSecondStep.style.display = 'block';
+      currentStep = 2;
     }
 
     resetSlidingMenuStyles();
-}
+  }
 
-function resetSlidingMenuStyles() {
+  function resetSlidingMenuStyles() {
     slidingMenu.classList.add('sliding-menu-initial');
+  }
+
+  document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
+  document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
+
+  var modal = document.getElementById('modal');
+  var closeButton = document.getElementById('close');
+  var noButton = document.getElementById('no');
+  var yesButton = document.getElementById('yes');
+
+  function showModal() {
+        modal.style.display = 'block';
+    }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  closeButton.addEventListener('click', closeModal);
+  noButton.addEventListener('click', closeModal);
+  yesButton.addEventListener('click', handleNextButtonClick);
+
+  slidingMenu.addEventListener('click', function(event) {
+    chevronIcon.classList.toggle('rotate-upside-down');
+});
+
+
+  $(document).ready(function () {
+    $('#nextButton').on('click', function () {
+      if ($('#targetSecondStep').css('display') !== 'block') {
+        let checked = false;
+        $('.toggle__input').each(function () {
+          if ($(this).prop('checked')) {
+            checked = true;
+            return false;
+          }
+        });
+
+        if (!checked) {
+          showModal();
+        } else {
+          document.getElementById('nextButton').removeAttribute('disabled');
+        }
+      }
+    });
+  });
+
+function checkPlanSelection() {
+  if (!$('.plan').hasClass('selected-plan')) {
+    showModalSelectPlan();
+  }
 }
 
+function showModalSelectPlan() {
+  $('#modalSelectPlan').css('display', 'block');
+}
 
-document.getElementById('backButtonInSecondStep').addEventListener('click', goBack);
-document.getElementById('backButtonInThirdStep').addEventListener('click', goBack);
+function closeModalSelectPlan() {
+  $('#modalSelectPlan').css('display', 'none');
+}
+
+$('#okSelectPlan').on('click', function () {
+  closeModalSelectPlan();
+});
 
 </script>
 
