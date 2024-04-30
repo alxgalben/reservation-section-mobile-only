@@ -381,7 +381,7 @@
         
             <div class="col-md-4" style="max-height: 850px; padding-top: 1rem; margin-bottom: 2rem; padding-left: 0 !important; padding-right: 0 !important;">
             <div class="card h-100" style="position: relative; overflow: hidden; border-radius: 24px !important;">
-              <div class="card-header bg-light bg-gradient" style="text-align: center; font-weight: bold; font-size: 30px; background-size: cover; position: relative; background-position: center; background-image: url('gradient-plus.png');">Detaliile rezervarii</div>
+              <div class="card-header bg-light bg-gradient" style="text-align: center; font-weight: bold; font-size: 30px; background-size: cover; position: relative; background-position: center; background-image: url('gradient-plus.png') !important; color: white;">Detaliile rezervarii</div>
                 <div class="card-body bg-light bg-gradient" style="overflow-y: auto; text-align: left; background-color: #e5d3ed !important;">
                   <div class="col-sm-6" style="padding: 0 !important;">
           
@@ -439,6 +439,18 @@
         </div>
         
         <div id="targetSecondStep" style="overflow-y: auto; padding-bottom: 5rem;">
+
+          <div class="modal-window" id="modalUpgradePlan" style="z-index: 5001; display: none;">
+            <div>
+              <a href="#" title="Close" class="modal-close" id="closeButtonUpgradePlan" style="font-size: 12px; display: none !important;">Close</a>
+              <h1>Atentie!</h1>
+              <h6>Ai selectat planul STANDARD. Doresti sa treci la planul PLUS pentru doar 5 euro in plus?</h6>
+              <div class="button-container" style="margin-top: 1rem;">
+                <button type="button" class="btn btn-danger" id="noUpgrade">Nu</button>
+                <button type="button" class="btn btn-success" id="yeUpgrade">Da</button>
+              </div>
+            </div>
+          </div>
           
           <div class="modal-window" id="modal" style="z-index: 5001;">
             <div>
@@ -686,18 +698,6 @@
         </div>
 
         <div id="targetThirdStep" style="overflow-y: auto; padding-bottom: 5rem;">
-
-          <div class="modal-window" id="modalUpgradePlan" style="z-index: 5001; display: none;">
-            <div>
-              <a href="#" title="Close" class="modal-close" id="closeButtonUpgradePlan" style="font-size: 12px; display: none !important;">Close</a>
-              <h1>Atentie!</h1>
-              <h6>Ai selectat planul STANDARD. Doresti sa treci la planul PLUS pentru doar 5 euro in plus?</h6>
-              <div class="button-container" style="margin-top: 1rem;">
-                <button type="button" class="btn btn-danger" id="noUpgrade">Nu</button>
-                <button type="button" class="btn btn-success" id="yeUpgrade">Da</button>
-              </div>
-            </div>
-          </div>
           
           <div class="row g-4 mx-auto justify-content-center" style="width: 100%; margin-bottom: 25px; margin-left: 0px !important; margin-right: 0px !important;">
             <div class="progress" style="padding: 0 !important; width: 90%; margin-left: 5% !important; margin-right: 5% !important;">
